@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-claro: #dddfe1;
+    --cinza-escuro: #333;
+    --preto: #000;
+}
+
+::selection {
+    color: var(--verde);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    /* color: var(--cinza-escuro); */
+    background-color: var(--cinza-escuro);
+    font-variant: small-caps;
+    margin: 0 auto;
+}
+
+
+/* cabeçalho */
+header {
+    width: 100%;
+    background-image: linear-gradient(#000, #333, #4a98a6, #4a98a6);
+    height: 230px;
+}
+
+/* logomarca de globo */
+header img {
+    height: 100px;
+    position: absolute;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    position: absolute;
+    color: var(--offwhite);
+    top: 10px;
+    left: 50px;
+    animation: global-move 5s;
+}
+
+/* efeitos no h1 */
+@keyframes global-move {
+    0% {
+
+        left: 0px;
+        color: var(--verde);
+    }
+
+    25% {
+        left: 100px;
+        color: var(--offwhite);
+    }
+
+    50% {
+        right: 10px;
+        color: var(--amarelo);
+    }
+
+    75% {
+        top: 10px;
+        left: 50px;
+        color: var(--azul-letras);
+    }
+
+    100% {
+        top: 10px;
+        left: 50px;
+        color: var(--cinza-escuro);
+    }
+}
+
+
+/* form buscar */
+header form {
+    /* position: relative;
+    left: 700px; */
+    float: right;
+}
+
+header form input,
+header form button {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding-left: 5px;
+}
+
+form input {
+    background-color: var(--offwhite);
+    padding-left: 5px;
+}
+
+header button {
+    padding: 0px 5px 0px 5px;
+    background-color: var(--offwhite);
+    color: var(--cinza-escuro);
+}
+
+header button:hover {
+    transition: 0.3s;
+    background-color: var(--azul-letras);
+    color: var(--offwhite);
+    border: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+nav ul li:not(ul li ul li) {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* itens principais */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* color: var(--preto); */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* submenu */
+nav ul li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--preto);
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    line-height: 30px;
+    /* border: 1px solid; */
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 10px 0px 0px;
+}
+
+/* fim menu */
+
+/* titulo bem vindo */
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--cinza-escuro);
+    text-shadow: 1px 1px 1px var(--offwhite);
+    letter-spacing: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+section {
+    display: grid;
+    grid-auto-rows: minmax(500px, auto);
+    /* gap: 10px; */
+}
+
+/* primeira sessão */
+section:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1;
+
+}
+
+section:nth-child(1) div {
+    background-color: var(--cinza-claro);
+    /* alinha ao centro da box */
+    align-items: center;
+    padding: 10px 30px 30px 30px;
+    text-align: justify;
+    color: var(--azul-letras);
+    font-size: 1.5em;
+    margin: 10px 30px 30px 30px;
+    border-radius: 10px;
+}
+
+section:nth-child(2) div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    /* distanciar elementos */
+    padding: 20px;
+}
+
+section:nth-child(1) div p {
+    display: flex;
+    /* alinha ao centro da box */
+    align-items: center;
+    padding: 0px 30px 30px 30px;
+    text-align: justify;
+    color: var(--azul-letras);
+    text-shadow: .7px .7px .7px var(--cinza-escuro);
+    font-size: 1.5em;
+    line-height: 50px;
+}
+
+/* boxes presença mundial */
+section:nth-child(2) div {
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+/* imagem com position */
+section:nth-child(2) img:nth-child(2) {
+    position: absolute;
+    z-index: -1;
+    width: 45%;
+}
+
+section:nth-child(2) p {
+    color: var(--cinza-escuro);
+    text-shadow: .7px .7px .7px var(--amarelo);
+    padding: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: justify;
+    background-color: rgb(255, 255, 255, 0.5);
+    height: 61%;
+    width: 86%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(2) div:nth-child(1) p {
+    color: var(--amarelo);
+    text-shadow: .9px .9px .9px var(--cinza-escuro);
+}
+
+/* chamada para webinar */
+section:nth-child(3) div {
+    font-size: 1.4em;
+    /* distanciar elementos */
+    padding: 20px;
+    background-color: #333;
+}
+
+section:nth-child(3) div p {
+    display: flex;
+    /* alinha ao centro da box */
+    align-items: center;
+    padding: 30px;
+    text-align: justify;
+    color: var(--offwhite);
+    line-height: 50px;
+}
+
+section img {
+    width: 400px;
+    border-radius: 5px;
+}
+
+main section:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main section:nth-child(3) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* algo fixed */
+#logamarcaFixed {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+}
+
+#logamarcaFixed p {
+    color: var(--verde);
+}
+
+#logamarcaFixed img {
+    height: 60px;
+}
+
+footer {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    /* gradinete igual ao header, mas sem o preto */
+    background-image: linear-gradient(#333, #fff);
+}
+
+/* tamanho das logos redes sociais */
+footer a img {
+    height: 30px;
+}
+
+/* logomarcas nas laterais */
+footer img {
+    height: 50px;
+}

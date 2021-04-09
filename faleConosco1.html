@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="sortcut icon" href="img/logoGlobo-removebg-preview.png" type="image/gif" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/faleconosco1.css">
+        <title>Contato</title>
+    </head>
+
+    <body>
+        <header>
+            <!-- nav barra de pesquisa e cor gradiente img logomarca -->
+            <!-- display flex para estes dois itens -->
+
+            <img src="img/logoGlobo-removebg-preview.png" alt="logomarca global hits">
+            <h1>Global Hits</h1>
+            <form action="page" method="POST">
+                <input type="text" placeholder="pesquisar...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <!-- fim do display flex logo_buscar-->
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="#footer">Redes Sociais</a></li>
+            </nav>
+            <h2>Fale conosco</h2>
+        </header>
+        <main>
+            <form action="page-form" method="POST">
+                <div>
+                    <input type="text" placeholder="seu nome aqui" required>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="seu email aqui" required>
+                </div>
+                <div>
+                    <input type="tel" id="tel" placeholder="xx-xxxx-xxxx" title="digite: 00-0000-0000"
+                        pattern="^\d{2}-\d{4}-\d{4}$" maxlength="12" required>
+                </div>
+                <div>
+                    <input type="text" placeholder="cargo">
+                </div>
+                <div>
+                    <input type="text" placeholder="empresa" required>
+                </div>
+
+                <div>
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+
+            <img id="imagemFormulario" src="img/faleConosco3.jpeg" alt="">
+
+        </main>
+
+
+        <!-- será utilizada como fixed -->
+        <!-- <div id="logamarcaFixed">
+            <p>BANNER COM ALGO ESCRITO AQUI</p>
+            <img src="img/globalHits.png" alt="logomarca da Global Hits" title="Global Hits">
+        </div> -->
+
+        <footer id="footer">
+            <img src="img/globalHits.png" alt="">
+            <a href="https://www.linkedin.com/company/globalhitss/?originalSubdomain=mx"><img src="img/linkedinLogo.svg"
+                    alt="logomarca LinkedIn"></a>
+            <a href="https://twitter.com/globalhitss?lang=pt"><img src="img/twitterLogo.svg"
+                    alt="logomarca Twitter"></a>
+            <a href="https://www.youtube.com/channel/UCb9c_GmL0xyrXC3P5GzSJwA"><img src="img/youtubeLogo.svg"
+                    alt="logomarca Youtube"></a>
+            <img src="img/globalHits.png" alt="">
+        </footer>
+
+
+    </body>
+
+</html>

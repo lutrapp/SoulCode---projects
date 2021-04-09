@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-escuro: #333;
+    --preto: #000;
+}
+
+::selection {
+    color: var(--verde);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    /* color: var(--cinza-escuro); */
+    background-color: var(--cinza-escuro);
+    font-variant: small-caps;
+    margin: 0 auto;
+}
+
+
+/* cabeçalho */
+header {
+    width: 100%;
+    background-image: linear-gradient(#000, #333, #4a98a6, #4a98a6);
+    height: 230px;
+}
+
+/* logomarca de globo */
+header img {
+    height: 100px;
+    position: absolute;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    position: absolute;
+    color: var(--offwhite);
+    top: 10px;
+    left: 50px;
+    animation: global-move 5s;
+}
+
+/* efeitos no h1 */
+@keyframes global-move {
+    0% {
+
+        left: 0px;
+        color: var(--verde);
+    }
+
+    25% {
+        left: 100px;
+        color: var(--offwhite);
+    }
+
+    50% {
+        right: 10px;
+        color: var(--amarelo);
+    }
+
+    75% {
+        top: 10px;
+        left: 50px;
+        color: var(--azul-letras);
+    }
+
+    100% {
+        top: 10px;
+        left: 50px;
+        color: var(--cinza-escuro);
+    }
+}
+
+
+/* form buscar */
+header form {
+    /* position: relative;
+    left: 700px; */
+    float: right;
+}
+
+header form input,
+header form button {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding-left: 5px;
+}
+
+form input {
+    background-color: var(--offwhite);
+    padding-left: 5px;
+}
+
+header button {
+    padding: 0px 5px 0px 5px;
+    background-color: var(--offwhite);
+    color: var(--cinza-escuro);
+}
+
+header button:hover {
+    transition: 0.3s;
+    background-color: var(--azul-letras);
+    color: var(--offwhite);
+    border: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+nav ul li:not(ul li ul li) {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* itens principais */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* color: var(--preto); */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* submenu */
+nav ul li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--preto);
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    line-height: 30px;
+    /* border: 1px solid; */
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 10px 0px 0px;
+}
+
+/* fim menu */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--cinza-escuro);
+    text-shadow: 1px 1px 1px var(--offwhite);
+}
+
+h3 {
+    font-size: 2em;
+    padding: 20px 30px 20px 50px;
+}
+
+/* grid principal main */
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    margin: 2%;
+}
+
+.content img {
+    height: 100px;
+}
+
+.content div {
+    border-radius: 10px;
+}
+
+/* parágrafos de .content */
+.content div p {
+    font-size: 1.32em;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* detalhes texto central */
+.content div p #detalheTexto {
+    font-weight: bold;
+    color: var(--azul-letras);
+}
+
+/* bloco central sobre a empresa */
+.content :nth-child(1) {
+    background-color: var(--offwhite);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    border-radius: 10px;
+}
+
+/* bloco missão */
+.content :nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    border-radius: 10px;
+    background-image: linear-gradient(#f8f8f8, #f7e715);
+}
+
+.content :nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    border-radius: 10px;
+}
+
+.content :nth-child(2),
+.content :nth-child(4),
+.content :nth-child(6) {
+    z-index: 2;
+}
+
+/* trazendo os títulos dos cards para a frente do texto */
+.content :nth-child(3),
+.content :nth-child(5),
+.content :nth-child(7) {
+    z-index: 3;
+    background-color: var(--amarelo);
+    font-size: 2.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* para deslocar para o fundo os textos ao passar o mouse */
+.content :nth-child(3):hover,
+.content :nth-child(5):hover,
+.content :nth-child(7):hover {
+    transition: 0.8s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* bloco visão */
+.content :nth-child(4) {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+    background-image: linear-gradient(#f8f8f8, #f7e715);
+}
+
+.content :nth-child(5) {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+}
+
+/* política de qualidade */
+.content :nth-child(6) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    border-radius: 10px;
+    background-image: linear-gradient(#f8f8f8, #f7e715);
+}
+
+.content :nth-child(7) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    border-radius: 10px;
+}
+
+/* blocos cinza composição */
+.content :nth-child(8) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+}
+
+.content :nth-child(9) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    border-radius: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: linear-gradient(#333, #fff);
+}
+
+/* tamanho das logos redes sociais */
+footer a img {
+    height: 30px;
+}
+
+/* logomarcas nas laterais */
+footer img {
+    height: 50px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Aline Matias, Luciane Trapp -->
+        <link rel="stylesheet" href="css/form3.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="sortcut icon" href="img/logoGlobo-removebg-preview.png" type="image/gif" />
+        <title>Contato 3</title>
+    </head>
+    <body>
+        <header>
+            <!-- display flex para estes dois itens -->
+           
+                <img src="img/logoGlobo-removebg-preview.png" alt="logomarca global hits">
+                <h1>GLOB&Lambda;L HITSS</h1>
+                <form action="page" method="POST">
+                    <input type="text" placeholder="pesquisar...">
+                    <button type="submit">Buscar</button>
+                </form>
+           
+            <!-- fim do display flex logo_buscar-->
+            <nav>
+                <ul>
+                    <li><a href="index3.html">Home</a></li>
+                    <li><a href="quemSomos3.html">Quem Somos</a></li>
+                    <li><a href="produtos3.html">Produtos e Serviços</a>
+                        <ul>
+                            <li><a href="produtos3.html">Força de vendas</a>
+                            <li><a href="produtos3.html">Soluções para Covid</a>
+                            <li><a href="produtos3.html">Eficiência energética</a>
+                            <li><a href="produtos3.html">Migração para nuvem</a>
+                        </ul>
+                    </li>
+                    <li><a href="contato3.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Fale Conosco</h2>
+            <form action="page-form" method="POST">
+                <div>
+                    <input type="text" placeholder="seu nome aqui" required>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="seu email aqui" required>
+                </div>
+                <div>
+                    <input type="tel" id="tel" placeholder="xx-xxxx-xxxx" title="digite: 00-0000-0000" pattern="^\d{2}-\d{4}-\d{4}$" maxlength="12" required>
+                </div>
+                <div>
+                    <input type="text" placeholder="cargo">
+                </div>
+                <div>
+                    <input type="text" placeholder="empresa" required>
+                </div>
+
+                <div>
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>        
+            </form>
+        </main>
+        <!--fixed -->
+        <div id="logamarcaFixed">
+            <img src="img/logoGlobo-removebg-preview.png" alt="logomarca da Global Hits" title="Global Hits">
+        </div>
+        <footer>
+            <a href="https://www.linkedin.com/company/globalhitss/?originalSubdomain=mx"><img src="img/linkedinBlack.png"
+                alt="logomarca LinkedIn"></a>
+            <a href="https://twitter.com/globalhitss?lang=pt"><img src="img/twitterBlack.png"
+                    alt="logomarca Twitter"></a>
+            <a href="https://www.youtube.com/channel/UCb9c_GmL0xyrXC3P5GzSJwA"><img src="img/youtubeBlack.png"
+                    alt="logomarca Youtube"></a>
+            <p>&copyHits 2021</p>
+        </footer>
+    </body>
+ <!-- Maria Arabela de Farias, Pollyana Sousa, Tulani da Silva -->
+</html>

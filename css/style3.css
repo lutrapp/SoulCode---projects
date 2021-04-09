@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-escuro: #333;
+}
+
+::selection {
+    color: var(--verde);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-image: linear-gradient(to right, #f8f8f8 2%, #4a98a6, #006d74);
+    font-variant: small-caps;
+}
+
+/* cabeçalho */
+header {
+    width: 100%;
+    height: 230px;
+    background-image: linear-gradient(to bottom right, #f8f8f8 30%, #a0c100, #4a98a6, #006d74);
+}
+
+header img {
+    height: 100px;
+    position: absolute;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    position: absolute;
+    color: var(--cinza-escuro);
+    top: 10px;
+    left: 80px;
+    animation: global-move 5s;
+    font-variant: small-caps;
+}
+
+/* efeitos no h1 */
+@keyframes global-move {
+    0% {
+
+        left: 0px;
+        color: var(--cinza-escuro);
+    }
+
+    25% {
+        left: 100px;
+        color: var(--azul-fundo);
+    }
+
+    50% {
+        right: 10px;
+        color: var(--verde);
+    }
+
+    75% {
+        top: 10px;
+        left: 70px;
+        color: var(--azul-letras);
+    }
+
+    100% {
+        top: 10px;
+        left: 80px;
+        color: var(--azul-fundo);
+    }
+}
+
+/* form buscar */
+header form {
+    float: right;
+}
+
+header form input,
+header form button {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    font-variant: small-caps;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+
+}
+
+nav ul li a:hover {
+    color: var(--offwhite);
+    background-color: rgba(208, 246, 125, 0.5);
+    padding: 4px;
+    transition: 0.8s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    line-height: 30px;
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    padding: 10px 10px 0px 0px;
+}
+
+nav ul li ul li {
+    font-size: 0.9em;
+}
+
+/* Conteudo */
+section {
+    display: grid;
+    grid-auto-rows: minmax(200px, auto);
+    width: 95%;
+    margin: 0 auto;
+}
+
+section div {
+    background-color: rgb(255, 255, 255, 0.35);
+}
+
+section:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1;
+}
+
+main section:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main section:nth-child(3) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section:nth-child(1) div,
+section:nth-child(2) div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    /* distanciar elementos */
+    padding: 20px;
+}
+
+section:nth-child(1) img {
+    width: 40%;
+}
+
+section:nth-child(1) img:hover {
+    width: 50%;
+    transition: 0.3s;
+}
+
+section:nth-child(1) div p {
+    display: flex;
+    /* alinha ao centro da box */
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--cinza-escuro);
+    line-height: 50px;
+}
+
+section:nth-child(2) div img {
+    width: 70%;
+    margin-left: 10%;
+    border-radius: 40px;
+    position: relative;
+}
+
+section:nth-child(2) img:hover {
+    width: 75%;
+    transition: 0.3s;
+}
+
+section:nth-child(2) div p {
+    display: flex;
+    /* alinha ao centro da box */
+    align-items: center;
+    margin-left: 10%;
+    text-align: justify;
+    color: var(--cinza-escuro);
+    line-height: 50px;
+}
+
+section:nth-child(3) div {
+    font-size: 1.3em;
+    /* distanciar elementos */
+    padding: 20px;
+    background-image: repeating-linear-gradient(toleft, #4a98a6, #f8f8f8);
+}
+
+section:nth-child(3) div h4 {
+    text-align: center;
+}
+
+section:nth-child(3) div p {
+    display: flex;
+    /* alinha ao centro da box */
+    align-items: baseline;
+    padding: 30px;
+    text-align: justify;
+    /* font-size: 0.9em; */
+    color: var(--cinza-escuro);
+    line-height: 50px;
+}
+
+section:nth-child(3) div img {
+    width: 100%;
+    border-radius: 40px;
+}
+
+section:nth-child(3) div img:hover {
+    opacity: 0.8;
+}
+
+#logamarcaFixed {
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+}
+
+#logamarcaFixed img {
+    width: 5em;
+}
+
+/* Rodape */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-shadow: 20px 10px 20px var(--offwhite);
+}
+
+footer p {
+    font-size: 0.8em;
+    font-variant: small-caps;
+    margin-top: 1em;
+}
+
+/* tamanho das logos redes sociais */
+footer img {
+    height: 1.4em;
+}

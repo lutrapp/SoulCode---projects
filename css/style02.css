@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-escuro: #333;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+/* ---------cabeçalho----------- */
+header {
+    width: 100%;
+    height: 16rem;
+    background-image: linear-gradient(#006d74, #f8f8f8);
+    margin-bottom: 80px;
+}
+
+header img {
+    height: 150px;
+    margin-top: 40px;
+    position: relative;
+    right: 237px;
+    bottom: 30px;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    float: left;
+    position: relative;
+    /* right: 1650px; */
+    top: 160px;
+    color: var(--cinza-escuro);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+}
+
+header form input,
+header form button 
+{
+    position: relative;
+    float: right;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+header form input,
+header form button 
+{
+    right: 40px;
+    margin-left: 10px;
+    bottom: 30px;
+}
+
+nav {
+    height: 100px;
+    position: relative;
+    bottom: 80px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-left: 23%;
+}
+
+nav li ul {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: absolute;
+}
+
+nav ul li a:hover {
+    color: var(--verde);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    line-height: 30px;
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 10px 0px 0px;
+}
+
+/* -----fim menu------ */
+
+section {
+    display: grid;
+    grid-auto-rows: 419px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+main section:nth-child(1) {
+    width: 90%;
+    height: 600px;
+    background-color: #f8f8f8;
+    grid-template-columns: 1;
+}
+
+main section:nth-child(1) img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    background-color: #f8f8f8;
+}
+
+main section:nth-child(1) img:hover {
+    opacity: 1;
+}
+
+main section:nth-child(1) p,
+.h2sobre {
+    position: relative;
+    bottom: 25rem;
+    padding: 2rem 2rem 0 2rem;
+    text-align: center;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 1px #000;
+    font-size: 30px;
+}
+
+main section:nth-child(1) .h2sobre {
+    color: #f8f8f8;
+    font-size: 50px;
+}
+
+main section:nth-child(2) {
+    width: 90%;
+    margin-top: 400px;
+    height: 570px;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: linear-gradient(#f8f8f8, #006d74);
+}
+
+main section:nth-child(2) img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+main section:nth-child(2) p,
+.h2quem {
+    position: relative;
+    bottom: 1rem;
+    padding: 2rem 2rem 0 2rem;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+
+}
+
+main section:nth-child(2) .h2quem {
+    margin-top: 120px;
+    color: #333;
+    font-size: 50px;
+}
+
+#presenca ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+main section:nth-child(3) {
+
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.fi-rr-dart {
+    font-size: 2.5rem;
+    position: relative;
+    top: 1rem;
+    color: var(--azul-fundo);
+}
+
+.fi-rr-eye {
+    font-size: 2.5rem;
+    position: relative;
+    top: 1rem;
+    color: var(--azul-fundo);
+}
+
+#tecnologia {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    bottom: 70px;
+    right: 60px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+}
+
+main section:nth-child(3) h2 {
+    padding-top: 2rem;
+    font-size: 40px;
+}
+
+main section:nth-child(3) p {
+    padding: 2rem;
+    color: #333;
+    text-align: justify;
+    font-size: 23px;
+}
+
+/* banner fixed */
+#logamarcaFixed {
+    position: fixed;
+    bottom: 53px;
+    right: 0;
+}
+
+/* -----------Footer--------- */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--cinza-escuro);
+    height: 50px;
+}
+
+footer div a {
+    color: rgb(209, 199, 199);
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+/* tamanho das logos redes sociais */
+footer img {
+    height: 30px;
+}
+
+
+/* -----------------Pagina Quem Somos-------------------- */
+
+/* #quemSomos {display: grid;
+    grid-template-columns: 1;
+    grid-auto-rows: 800px;
+} */
+
+#quemSomos h1 {
+    text-align: center;
+}
+
+#quemSomos h4 {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 2%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+h4 {
+    line-height: 45px;
+}
+
+hr {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#quemSomos section {
+    display: flex;
+    justify-content: space-around;
+    /* position: relative; */
+}
+
+#quemSomos img {
+    width: 440px;
+    height: 380px;
+}
+
+#visao {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.1em;
+    z-index: -1;
+    white-space: pre-line;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#missao {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    font-weight: bolder;
+    font-size: 1.1em;
+    z-index: -1;
+    white-space: pre-line;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#politica {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1.1em;
+    z-index: -1;
+    white-space: pre-line;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#quemSomos img:hover {
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.8s;
+}

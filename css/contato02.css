@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-escuro: #333;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: var(--cinza-escuro);
+    background-image: url("../img/cubes.png");
+    background-color: #f5f5f5;
+}
+
+/* cabeçalho */
+header {
+    width: 100%;
+    height: 16rem;
+    background-image: linear-gradient(#006d74, #f8f8f8);
+    margin-bottom: 80px;
+}
+
+header img {
+    height: 150px;
+    margin-top: 40px;
+    position: relative;
+    right: 237px;
+    bottom: 30px;
+}
+
+
+header h1 {
+    letter-spacing: 5px;
+    float: left;
+    position: relative;
+    /* right: 1650px; */
+    top: 160px;
+    color: var(--cinza-escuro);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+}
+
+header form input,
+header form button 
+{
+    position: relative;
+    float: right;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    }
+header form input,
+header form button
+{ 
+    right: 40px;
+    margin-left: 10px;
+    bottom: 30px;
+}
+
+nav {
+    height: 100px;
+    position: relative;
+    bottom: 80px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-left: 23%;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+   
+  }
+nav ul li a:hover {
+    color: var(--verde);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    line-height: 30px;
+    /* border: 1px solid; */
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 10px 0px 0px;
+}
+/* fim menu */
+
+/***** FORMULÁRIO *******/
+
+#content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebebeb;
+    width: 40%;
+    margin: 2rem auto 5rem auto;
+    /*padding: 0px 0px 2rem 0px;*/
+    padding: 0.5rem;
+    background-color: #fafafa;
+}
+#faleConosco h2 {
+    text-align: center;
+    font-family: "Titillium Web";
+}
+#content img {
+    width: 100%;
+    display: block;
+    margin: 0px auto 2rem auto;
+}
+#content form input, textarea {
+    display: block;
+    width: 400px;
+    height: 36px;
+    background-color: #ebebeb;
+    border-radius: 7px;
+    border-style: none;
+    margin: 1rem auto;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}
+#content #botao  {
+    width: 100px;
+    height: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#content #botao:hover  {
+    width: 100px;
+    height: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--azul-letras);
+}
+#content form input:hover {
+    background-color: #cecece;
+}
+#content form textarea {
+    height: 100px;
+    margin: 0.8rem auto;
+    padding: 1rem;
+}
+#content form textarea:hover {
+    background-color: #cecece;
+}
+/***** FIM DO FORMULÁRIO *****/
+
+/* algo fixed */
+#logamarcaFixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 2.5rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: var(--cinza-escuro);
+}
+footer div a{ 
+color: rgb(209, 199, 199);
+text-decoration: none;
+padding-left: 20px;
+}
+
+/* tamanho das logos redes sociais */
+footer img {
+    height: 30px;
+}

@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-fundo: #006d74;
+    --amarelo: #f7e715;
+    --azul-letras: #4a98a6;
+    --offwhite: #f8f8f8;
+    --verde: #a0c100;
+    --cinza-claro: #dddfe1;
+    --cinza-escuro: #333;
+    --preto: #000;
+}
+
+::selection {
+    color: var(--verde);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    /* color: var(--cinza-escuro); */
+    background-color: var(--cinza-escuro);
+    font-variant: small-caps;
+    margin: 0 auto;
+}
+
+
+/* cabeçalho */
+header {
+    width: 100%;
+    background-image: linear-gradient(#000, #333, #4a98a6, #4a98a6);
+    height: 230px;
+}
+
+/* logomarca de globo */
+header img {
+    height: 100px;
+    position: absolute;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    position: absolute;
+    color: var(--offwhite);
+    top: 10px;
+    left: 50px;
+    animation: global-move 5s;
+}
+
+/* efeitos no h1 */
+@keyframes global-move {
+    0% {
+
+        left: 0px;
+        color: var(--verde);
+    }
+
+    25% {
+        left: 100px;
+        color: var(--offwhite);
+    }
+
+    50% {
+        right: 10px;
+        color: var(--amarelo);
+    }
+
+    75% {
+        top: 10px;
+        left: 50px;
+        color: var(--azul-letras);
+    }
+
+    100% {
+        top: 10px;
+        left: 50px;
+        color: var(--cinza-escuro);
+    }
+}
+
+
+/* form buscar */
+header form {
+    float: right;
+}
+
+header form input,
+header form button {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding-left: 5px;
+}
+
+main form input {
+    background-color: var(--offwhite);
+    padding-left: 5px;
+}
+
+header button {
+    padding: 0px 5px 0px 5px;
+    background-color: var(--offwhite);
+    color: var(--cinza-escuro);
+}
+
+header button:hover {
+    transition: 0.3s;
+    background-color: var(--azul-letras);
+    color: var(--offwhite);
+    border: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+nav ul li:not(ul li ul li) {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* itens principais */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* color: var(--preto); */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* submenu */
+nav ul li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--preto);
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* esconde submneu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+    line-height: 30px;
+    /* border: 1px solid; */
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px 10px 0px 0px;
+}
+
+/* fim menu */
+/* fale conosco */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--cinza-escuro);
+    text-shadow: 1px 1px 1px var(--offwhite);
+}
+
+/* fim header */
+
+
+.contentProdutos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(130px, auto);
+      margin: 2% 8% 2% 8%;
+}
+
+.contentProdutos div {
+    background-color: var(--amarelo);
+    border-radius: 10px;
+}
+
+
+/* texto dentro dos boxes inferiores à imagem*/
+.contentProdutos div p {
+    display: flex;
+    font-size: var(--cinza-escuro);
+    margin-left: 51%;
+    font-size: 1.5em;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.contentProdutos div h3 {
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* força de vendas */
+.contentProdutos div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url("../img/forcaVendas11.jpg");
+    background-size: cover;
+    z-index: 2;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contentProdutos div:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 1;
+}
+/* soluçoes covid */
+.contentProdutos div:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url("../img/solucoesCovid1.png");
+    background-size: cover;
+    z-index: 2;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contentProdutos div:nth-child(7) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 1;
+}
+/* coluna central */
+.contentProdutos div:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: var(--cinza-escuro);
+}
+
+/* eficiencia energética */
+.contentProdutos div:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-image: url("../img/eficienciaEnergetica11.jpg");
+    z-index: 2;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contentProdutos div:nth-child(8) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    z-index:1;
+}
+
+/* migração para nuvem */
+.contentProdutos div:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-image: url("../img/solucaoNuvem.jpg");
+    background-size: cover;
+    z-index: 2;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contentProdutos div:nth-child(9) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    z-index: 1;
+}
+
+/* efeito e movimento ao passar o mouse */
+.contentProdutos div:nth-child(1):hover,
+.contentProdutos div:nth-child(2):hover,
+.contentProdutos div:nth-child(4):hover,
+.contentProdutos div:nth-child(5):hover {
+    transition: 1s;
+    margin-right: 50%;
+    cursor: pointer;
+}
+
+/* caixas extras para conteúdo posterior */
+.contentProdutos div:nth-child(10),
+.contentProdutos div:nth-child(11),
+.contentProdutos div:nth-child(12),
+.contentProdutos div:nth-child(13) {
+    background-color: var(--cinza-escuro);
+ }
+
+/* algo fixed */
+#logamarcaFixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 7;
+}
+#logamarcaFixed img {
+    height: 50px;
+}
+
+#logamarcaFixed p {
+    color: var(--offwhite);
+}
+
+
+/* rodapé */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: linear-gradient(#333, #fff);
+}
+
+/* tamanho das logos redes sociais */
+footer a img {
+    height: 30px;
+}
+
+/* logomarcas nas laterais */
+footer img {
+    height: 50px;
+}
