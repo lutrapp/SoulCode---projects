@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 17% 2% 0 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 63 deixa sem resíduos */
+    background-image:url(img/lampada.jpeg);
+    background-repeat: x;
+    background-size: repeat;
+    transform: skewZ(30deg);
+}
+
+p {
+    color: white;
+
+}

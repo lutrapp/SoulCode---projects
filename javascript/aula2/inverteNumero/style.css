@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:var(--soulCodeAzul);
+    color: white;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 10% 2% 5% 2%;
+    padding: 2%;
+    
+}
+
+p {
+    color: white;
+
+}

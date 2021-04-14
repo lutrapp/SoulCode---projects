@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--soulCodeCinza);
+    color: grey;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 10% 2% 10% 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar. 63 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+}
+
+p {
+    color: white;
+
+}
