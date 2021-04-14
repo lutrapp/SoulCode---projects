@@ -1,2 +1,2 @@
 # SoulCode---projects
-Pasta de projetos propostos no curso de desenvolvimento fullstack da SoulCode
+Pasta de projetos de exercícios propostos no curso de desenvolvimento fullstack da SoulCode
