@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    background-color: grey;
+    color: white;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 20px;
+    padding: 2%;
+    border: 60px solid transparent;
+    border-image:url(img/download.png) 90 round;
+}
+
+p {
+    color: white;
+}
