@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    /* para escurecer o fundo */
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)), url(img/logosoulcode1-removebg-preview.png);
+    color: white;
+    font-size: 2em;
+    line-height: 2;
+    text-align: center;
+    margin: 2% 2% 2% 2%;
+    padding: 2%; 
+}
