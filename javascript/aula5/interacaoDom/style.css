@@ -66,11 +66,23 @@ button {
     padding: 1%;
     background-color: black;
     color: var(--soulCodeAmarelo);
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-variant: small-caps;
     cursor: pointer;
+    outline: none;
+    margin: 1%;
+}
+
+button:hover {
+    /* para a div à esquerda não andar */
+    padding-left: .2%;
+    color: black;
+    transition: .9s;
+    background-image: url(img/greyWoodBackground.jpg);
+    background-size: contain;
+    border: 5px dotted #f3c110;
 }
 
 #fixed {

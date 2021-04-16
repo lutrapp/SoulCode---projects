@@ -1,7 +1,8 @@
-var lista = [];
+
 
 var btn = document.querySelector('button');
 btn.onclick = function(){
+    var lista = [];
     var numero = parseInt(prompt("Digite um número entre 0 e 21"));
     if(numero > 0 && numero <21){
         for(x=1; x<=numero; x++){
