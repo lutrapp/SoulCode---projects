@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    background-image: url(img/greyWoodBackground.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 63 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 63 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+
+}
+
+section {
+    transform: rotate(-2deg);
+    transform: skewZ(30deg);
+    display: grid;
+    grid-template-columns: 2;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+div {
+    background-color: var(--soulCodeAzul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: stretch;
+}
+
+section div:nth-child(4) {
+    background-color: var(--soulCodeAmarelo);
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+button {
+    padding: 1%;
+    background-color: black;
+    color: var(--soulCodeAmarelo);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+#fixed {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: stretch;
+    background-color: black;
+    color: var(--soulCodeAzul);
+    font-size: .7em;
+    bottom: 10px;
+    right: 10px;
+    height: 70px;
+    width: 190px;
+    padding: 2px;
+}
