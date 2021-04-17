@@ -21,8 +21,8 @@ body {
     margin: 2%;
     padding: 2%;
     border: 60px solid transparent;
-    /* para a imagem esticar e 63 deixa sem resíduos */
-    border-image: url(img/logosoulcode1-removebg-preview.png) 63 round;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
     border-image-repeat: stretch;
     box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
 
@@ -87,16 +87,17 @@ button:hover {
 
 #fixed {
     position: fixed;
+    width: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
-    align-content: space-between;
-    align-items: stretch;
-    background-color: black;
-    color: var(--soulCodeAzul);
-    font-size: .7em;
-    bottom: 10px;
-    right: 10px;
-    height: 70px;
-    width: 190px;
-    padding: 2px;
+    align-items: center;
+    padding: 10px;
+    right: 1%;
+    bottom: 1%;
+    background-color: var(--soulCodeAzul);
+    color: black;
+    border-radius: 50%;
+    font-size: .5em;
+    border: #f3c110 5px dotted;
 }
