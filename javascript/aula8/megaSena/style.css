@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    /* background-image: url(img/backgroundRocks.jpg); */
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.3em;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+    background-image: url(img/ouro.jpg);
+    background-size: cover;
+}
+
+h1 {
+    background-color: rgb(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+div, div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.5em;
+}
+
+div p {
+    background-color: rgb(255, 255, 255, 0.7);
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+button {
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 5px;
+    font-size: .5em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: yellow;
+}
+
+#fixed {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 1%;
+    bottom: 1%;
+    background-image: url(img/dolar.jpg);
+    border-radius: 50%;
+    font-size: .4em;
+    font-weight: bold;
+    border: #f3c110 5px dotted;
+    filter: contrast(70%)
+   }
+
+#fixed p {
+    background-color: rgb(255, 255, 255, 0.94);
+    padding: 2px;
+    line-height: 20px;
+}
+
+fixed:hover {
+    transform: rotate(360deg);
+}

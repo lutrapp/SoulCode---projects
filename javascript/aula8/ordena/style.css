@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    background-image: url(img/folhagem.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+}
+
+h1 {
+    color: white;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+#div1, #div2, #div3 {
+    background-color: rgb(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(54, 54, 54);
+}
+
+#fixed {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 1%;
+    bottom: 1%;
+    background-color: var(--soulCodeAzul);
+    color: black;
+    border-radius: 50%;
+    font-size: .5em;
+    border: #f3c110 5px dotted;
+}

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    background-color: var(--soulCodeCinza);
+    /* background-image: url(img/backgroundRocks.jpg); */
+    /* background-attachment: fixed;
+    background-size: cover; */
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: 2;
+    grid-auto-rows: minmax(10px, auto);
+    gap: 10px;
+}
+
+div {
+    background-color: rgb(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+p {
+    background-color: #59b5c4;
+}
+
+button {
+    padding: 1%;
+    background-color: black;
+    color: var(--soulCodeAmarelo);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-variant: small-caps;
+    cursor: pointer;
+    outline: none;
+    margin: 1%;
+}
+
+button:hover {
+    /* para a div à esquerda não andar */
+    padding-left: .2%;
+    color: black;
+    transition: .9s;
+    background-image: url(img/greyWoodBackground.jpg);
+    background-size: contain;
+    border: 5px dotted #f3c110;
+}
+
+#fixed {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 1%;
+    bottom: 1%;
+    background-color: black;
+    color: var(--soulCodeCinza);
+    border-radius: 50%;
+    font-size: .5em;
+    border: #f3c110 5px dotted;
+}

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: repeating-linear-gradient(black, grey, white); */
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.6em;
+    font-variant: small-caps;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    /* esse border diz respeito à logo */
+    border: 60px solid transparent;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+}
+
+h1 {
+    color: white;
+}
+
+/* svg onde aparece a hora certa*/
+.text {
+    fill: none;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+  }
+  .text:nth-child(5n + 1) {
+    stroke: aqua;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+  }
+  .text:nth-child(5n + 2) {
+    stroke: var(--soulCodeAmarelo);
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+  }
+  
+  .text:nth-child(5n + 3) {
+    stroke: white;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+  }
+  
+  .text:nth-child(5n + 4) {
+    stroke: var(--soulCodeAzul);
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+  }
+  
+  .text:nth-child(5n + 5) {
+    stroke:cornflowerblue;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+  }
+  
+  @-webkit-keyframes stroke {
+    100% {
+      stroke-dashoffset: -400;
+    }
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: -400;
+    }
+  }
+  
+  svg {
+    font-variant: small-caps;
+    width: 100%;
+    height: 200px;
+    font-size: 2.5em;
+   
+  }
+  /* fim svg  */
+
+
+/* logo lu */
+#fixed {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 1%;
+    bottom: 1%;
+    background-color: var(--soulCodeAzul);
+    color: black;
+    border-radius: 50%;
+    font-size: .5em;
+    border: #f3c110 5px dotted;
+}

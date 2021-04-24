@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soulCodeAzul: #59b5c4;
+    --soulCodeAmarelo: #f3c110;
+    --soulCodeCinza: #f0eff2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    background-image: url(img/backgroundRocks.jpg);
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.6em;
+    line-height: 2;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+    border: 60px solid transparent;
+    /* para a imagem esticar e 64 deixa sem resíduos */
+    border-image: url(img/logosoulcode1-removebg-preview.png) 64 round;
+    border-image-repeat: stretch;
+    box-shadow: 10px -50px 0px 10px --soulCodeAmarelo;
+
+}
+
+section {
+    /* transform: rotate(-2deg);
+    transform: skewZ(30deg); */
+    display: grid;
+    grid-template-columns: 2;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+div {
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+section div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* texto dos parágrafos nas divs*/
+div p.texto {
+font-size: 0.6em;
+background-color: var(--soulCodeCinza);
+padding: 10px;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+/* texto das respostas nos p's das divs*/
+div p:nth-child(2){
+    background-color: var(--soulCodeAzul);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+
+button {
+    padding: 1%;
+    background-color: black;
+    color: var(--soulCodeAmarelo);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-variant: small-caps;
+    cursor: pointer;
+    outline: none;
+    margin: 1%;
+}
+
+button:hover {
+    /*para o elemento de baixo não ficar dançando durante o hover */
+    padding-bottom: .2%;
+    color: white;
+    transition: .9s;
+    background-image: url(img/backgroundRocks.jpg);
+    background-size: contain;
+    border: 5px dotted #f3c110;
+}
+
+#fixed {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    right: .5%;
+    bottom: .5%;
+    background-color: black;
+    color: var(--soulCodeAmarelo);
+    border-radius: 50%;
+    font-size: .43em;
+    border: var(--soulCodeCinza) 5px dotted;
+}
