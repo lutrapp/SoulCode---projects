@@ -1,0 +1,439 @@
+/* zerando margin e padding dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* lipando estilo das listas */
+ul, ol, li {
+    list-style: none;
+}
+/* estilo padrão do site */
+body {
+    background-color: rgb(247, 244, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* derterminação do tamanho do conteudo */
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 1350px;
+    margin: 0 auto;
+    width: 80%;
+}
+/* cores */
+:root {
+    --azulClaro: #3AA1A6;
+    --azulMedio: #3B9AA7;
+    --mostarda: #FFB121;
+    --offWhite: #f8f8f8;
+    --areia: #E7D2CC;
+    --vermelho: rgb(206, 48, 48);
+    --cinzaClaro: #dcdcdc;
+    --cinzaEscuro: rgb(71, 69, 69);
+    --cinzaLetras: rgb(15, 15, 15);
+}
+h2{
+    color: var(--azulMedio);
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px var(--azulClaro);
+    padding: 30px 0 10px 0;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* cabeçalho */
+/* HEADER BRANCO COM LOGO SP */
+header {
+    height: 20vh;
+    background-color: var(--offWhite); 
+ }
+
+ header img {
+     width: 400px;
+ }
+
+/* MENU DE NAVEGAÇÃO */
+ nav {
+     height: 15vh;
+     background-color: var(--azulMedio);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ nav ul {
+    width: 100%;
+    margin-left: 10%;  
+}
+
+ nav li {
+     display: inline-block;
+     padding: 0 10px 0 10px;
+     font-size: 18px;
+ }
+
+ nav li a {
+     color: white;
+     text-decoration: none;
+     text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+ }
+
+ nav li a:hover {
+     color: var(--mostarda);
+     font-weight: bolder;
+ }
+
+ nav button {
+    margin-right: 10%;
+    height: 6vh;
+    width: 20%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--mostarda);
+    border: none;
+    border-radius: 20px;       
+    text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+}
+
+ nav button a{
+     color: white;
+     text-decoration: none;
+ }
+
+ nav button a:hover{
+     font-weight: bolder;
+     font-size: 20px;       
+ }
+
+/* BARRA DE ACESSIBILIADE FIXADA */
+ #barraFixada {
+     height: 10vh;
+     background-color: var(--azulClaro);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #barraFixada li {
+     display: inline-block;
+     padding: 0 2px 0 2px;
+     color: white;
+ }
+
+ #barraFixada ul {
+    font-size: 22px;
+}
+
+ #aumentar {
+     cursor: pointer;
+ }
+ 
+ #barraPesquisa{
+     background-color: white;
+     border-radius: 4px;
+     height: 4vh;
+     border: 1px solid #8a8a8a;
+     width: 15%; 
+     margin: 0 50px 0 50px;       
+   }
+   
+   #buscar{
+     padding-left: 5px;
+     font-style: italic;
+     font-size: 18px;    
+     height: 4vh;
+     width: 83%;
+     border: none;        
+     float: left; 
+     border-radius: 4px;      
+   }
+
+   #lupa {
+       height: 4vh;
+       float: right;
+       cursor: pointer;
+       background-color: white;
+       border-radius: 4px;
+   }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* informativo generico solicitado nos requisitos 1/3 */
+.titulo {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* banner passando imagens automaticamente 2/3 */
+#slide{
+    width: 100%;
+    height: 458px;
+    grid-column: 1/4;
+    position: relative; 
+    overflow: hidden;      
+}
+#slide img {
+    width: 100%;
+    border-radius: 15px;
+    position: absolute; 
+    opacity: 0; 
+    transition: opacity 800ms; 
+    overflow: hidden;
+}
+#slide img.imgOne {
+    opacity: 1; 
+}
+/* Informações sobre as ações durante a pandemia 3/3 */
+.aboutSP {
+    display: flexbox;
+    grid-column: 4/6;
+    grid-row: 2/5;
+    height: 450px;
+    margin-left: 2%;
+}
+.TabControl {
+    width: 100%;
+    overflow: hidden;
+    height: 350px; /*umenta o campo de info*/
+}
+.TabControl #header {
+    width: 100%;
+    overflow: hidden;
+    cursor: hand;
+}
+.TabControl #content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.TabControl .abas {
+    display: inline;
+}
+.TabControl .abas li {
+    color: var(--offWhite);
+    float: left;
+    cursor: pointer;
+}
+.aba {
+    width: 105px;
+    height: 30px;
+    border: solid 1px var(--cinzaClaro);
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    background: var(--azulMedio);
+}
+.ativa {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    background: var(--mostarda);
+}
+.ativa span{
+    color: #fff
+}
+.TabControl #content {
+    background: var(--offWhite)
+}
+.TabControl .conteudo {
+    width: 100%;
+    background: var(--cinzaClaro);
+    display: none;
+    height: 100%;
+    color: var(--cinzaLetras);
+}
+
+.TabControl .conteudo p {
+    padding: 0 15px 0 15px;
+}
+
+.selected {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--cinzaLetras);
+    background: var(--cinzaClaro);
+}
+#myForm{
+    background-color: var(--azulMedio);
+    border-radius: 0px 0px 5px 5px;
+    color: var(--offWhite);
+    height: 100px;
+    padding: 1%;
+}
+#myForm input{
+    font-size: 14px;
+}
+#myForm button{
+    background-color: var(--mostarda);
+    border-radius: 10%;
+    color: var(--offWhite);
+    font-size: 16px;
+    padding: 1%;
+    margin: 1% 0 0 40%;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* separador */
+.separador {
+    grid-column: 1/6;
+    grid-row: 6/7;
+    height: 50px;
+    padding-top: 70px;
+    padding-left: 32%;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* parte inferior */
+.tituloDevs {
+    grid-column: 1/6;
+    grid-row: 7/8;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.imgDevs {
+    border-radius: 100%;
+    height: 160px;
+    margin: 6% 0% 0% 3%;
+    width: 160px;
+    z-index: 2;
+}
+.bordaImg {
+    border-radius: 100%;
+    background-image: url(../img/backImg.gif);
+    box-shadow: 3px 3px 7px var(--cinzaLetras);
+    height: 170px;
+    margin: 2% 0% 4% 8%;
+    width: 170px;
+    z-index: 1;
+}
+.nameDevs {
+    color: var(--mostarda);
+    font-size: 24px;
+    margin-bottom: 4%;
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--cinzaLetras);
+}
+.sobreDevs {
+    border: 1px solid var(--mostarda);
+    height: 220px;
+    padding: 5px 5px 5px 5px;
+    margin: 5%;
+    text-align: center;
+}
+.devAna {
+    background-color: var(--cinzaClaro);
+    display: flexbox;
+    grid-column: 1/2;
+    grid-row: 8/12;
+    height: 480px;
+}
+.devBruna {
+    background-color: var(--cinzaClaro);
+    grid-column: 2/3;
+    grid-row: 8/12;
+    height: 480px;
+}
+.devLuciane {
+    background-color: var(--cinzaClaro);
+    grid-column: 3/4;
+    grid-row: 8/12;
+    height: 480px;
+}
+.devTalita {
+    background-color: var(--cinzaClaro);
+    grid-column: 4/5;
+    grid-row: 8/12;
+    height: 480px;
+}
+.devVitoria {
+    background-color: var(--cinzaClaro);
+    grid-column: 5/6;
+    grid-row: 8/12;
+    height: 480px;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* RODAPÉ */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--azulMedio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 70%; 
+}
+
+#divfooter2 { 
+    flex-direction: column;  
+ }
+
+footer h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#divfooter3 {
+    flex-direction: column; 
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+figure img {
+    padding: 5px 0 15px 0;
+}
+
+footer p {
+    font-size: 15px;
+    color: white;
+}
+
+
+/* ACESSIBILIADE */
+li.mais {
+    font-size: 30px;
+}
+
+button.mais {
+    font-size: 25px;
+}
+
+nav li.mais {
+    font-size: 25px;
+}
+
+main h2.mais {
+    font-size: 35px;
+}
+
+p.mais {
+    font-size: 22px;
+}
+
+footer h3.mais {
+    font-size: 30px;
+}
+
+footer p.mais {
+    font-size: 20px;
+}

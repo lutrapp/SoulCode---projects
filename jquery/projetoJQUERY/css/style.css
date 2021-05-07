@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azulClaro: #3AA1A6;
+    --azulMedio: #3B9AA7;
+    --mostarda: #FFB121;
+    --offWhite: #f8f8f8;
+    --areia: #E7D2CC;
+    --vermelho: rgb(206, 48, 48);
+    --cinzaClaro: #dcdcdc;
+    --cinzaEscuro: rgb(71, 69, 69);
+    --cinzaLetras: rgb(15, 15, 15);
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+section {
+    width: 100%;
+    height: 200vh;
+}
+
+/* HEADER BRANCO COM LOGO SP */
+    header {
+       height: 20vh;
+       background-color: var(--offWhite); 
+    }
+
+    header img {
+        width: 400px;
+    }
+
+/* MENU DE NAVEGAÇÃO */
+    nav {
+        height: 15vh;
+        background-color: var(--azulMedio);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-left: 10%;
+       
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0 10px 0 10px;
+        font-size: 18px;
+    }
+
+    nav li a {
+        color: white;
+        text-decoration: none;
+        text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+    }
+
+    nav li a:hover {
+        color: var(--mostarda);
+        font-weight: bolder;
+    }
+
+    nav button {
+        margin-right: 10%;
+        height: 6vh;
+        width: 20%;
+        padding: 10px;
+        font-size: 18px;
+        background-color: var(--mostarda);
+        border: none;
+        border-radius: 20px;       
+        text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+    }
+
+    nav button a{
+        color: white;
+        text-decoration: none;
+    }
+
+    nav button a:hover{
+        font-weight: bolder;
+        font-size: 20px;       
+    }
+
+/* BARRA DE ACESSIBILIADE FIXADA */
+    #barraFixada {
+        height: 10vh;
+        background-color: var(--azulClaro);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #barraFixada li {
+        display: inline-block;
+        padding: 0 2px 0 2px;
+        color: white;
+        
+    }
+
+    #barraFixada ul {
+        font-size: 22px;
+    }
+
+    #aumentar {
+        cursor: pointer;
+    }
+    
+    #barraPesquisa{
+        background-color: white;
+        border-radius: 4px;
+        height: 4vh;
+        border: 1px solid #8a8a8a;
+        width: 15%; 
+        margin: 0 50px 0 50px;       
+      }
+      
+      #buscar{
+        padding-left: 5px;
+        font-style: italic;
+        font-size: 18px;    
+        height: 4vh;
+        width: 83%;
+        border: none;        
+        float: left; 
+        border-radius: 4px;      
+      }
+
+      #lupa {
+          height: 4vh;
+          float: right;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 4px;
+      }
+
+/* FOTO GRANDE DE CAPA */
+    #capa { /* DIV CONTENDO AS IMAGENS */
+        width: 100%;
+        height: 90vh;
+        position: relative; /* obrigatório */
+        overflow: hidden;      
+    }
+
+    #capa img { /* AS IMAGENS */
+        width: 100%;
+        position: absolute; /* obrigatório */
+        opacity: 0; /* obrigatório */
+        transition: opacity 800ms; /* efeito para transicionar de forma mais suave */
+        overflow: hidden;
+    }
+
+    #capa img.selected {  /* A PRIMEIRA IMAGEM DEVE TER UMA CLASS, NESSE CASO FOI CHAMADA DE SELECTED */
+        opacity: 1; /* obrigatório */
+    }
+      
+ /* MAIN */
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #divMain {       
+        width: 80%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divsMain { 
+        width: 31%;
+        margin: 0 8px 0 8px;
+        height: 68vh;
+        position: relative;
+        bottom: 10%;
+        background-color: var(--offWhite);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0.2px 0.2px 2px 2px var(--cinzaClaro);  
+        padding-top: 20px;  
+    }
+
+    .divsMain:hover {
+        box-shadow: 1px 1px 8px 10px var(--azulClaro);
+        cursor: pointer;
+    }
+
+    .divsImg {
+        width: 66%;
+        height: 32vh;
+        border-radius: 50%;
+        background-color: var(--azulMedio);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divsMain img {
+        width: 80%;
+    }
+
+    .divsMain p {
+        text-align: justify;
+        font-size: 18px;
+        width: 90%;
+        margin-top: 5px;
+    }
+
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--azulMedio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 70%; 
+}
+
+#divfooter2 { 
+    flex-direction: column;  
+ }
+
+footer h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#divfooter3 {
+    flex-direction: column; 
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+figure img {
+    padding: 5px 0 15px 0;
+}
+
+footer p {
+    font-size: 15px;
+    color: white;
+}
+
+/* ACESSIBILIADE */
+li.mais {
+    font-size: 30px;
+}
+
+button.mais {
+    font-size: 25px;
+}
+
+nav li.mais {
+    font-size: 25px;
+}
+
+main h2.mais {
+    font-size: 35px;
+}
+
+p.mais {
+    font-size: 22px;
+}
+
+footer h3.mais {
+    font-size: 30px;
+}
+
+footer p.mais {
+    font-size: 20px;
+}

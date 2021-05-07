@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+        <meta name="author" content="Bruna Mazzaron, Luciane Trap, Talita, Vitoria">
+        <link rel="stylesheet" href="../css/sobreNos.css">
+        <script src="../libs/jquery-1.5.0.js"></script>
+        <script src="../libs/jquery-3.6.0.min.js"></script>
+        <script src="../js/sobreNos.js"></script>
+        <title>Sobre nós</title>   
+    </head>
+
+    <body>
+        <header>
+            <img src="../img/logosp.png" alt="Logo da cidade de São Paulo"/>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>INÍCIO</strong></a></li>
+                <li><a href="sobreNos.html" style="color: #FFB121;"><strong>SOBRE NÓS</strong></a></li>
+                <li><a href="informacoes.html"><strong>INFORMAÇÕES</strong></a></li>
+                <li><a href="ocupacao.html"><strong>OCUPAÇÃO</strong></a></li>
+                <li><a href="form.html"><strong>CADASTRO</strong></a></li>
+            </ul>
+
+            <button><a href="form.html">Cadastre-se</a></button>               
+        </nav>
+
+        <div id="barraFixada">
+            <ul>
+                <li id="normal"></li>
+                <li id="aumentar">- A +</li>
+            </ul>
+            
+            <div id="barraPesquisa">
+                <input type="text" id="buscar" placeholder="Buscar no site..."/>
+                <img src="../img/lupa.png" id="lupa" alt="Ícone lupa"/>
+            </div>
+
+            <div id="dataehora">
+                <ul> 
+                    <li id="datadata"></li>       
+                    <li id="horahora"></li>
+                </ul> 
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------ -->
+        <main>
+            <!-- Área informativa genérica -  requisito do trabalho -->
+            <section class="titulo">
+                <h2>Sobre nossas ações na Pandemia da COVID-19</h2>
+            </section>
+            <section id="slide">
+                <img src="../img/primeiraVacinaSp.jpg" alt="" class="imgOne">
+                <img src="../img/escola.jpg" alt="Escola">
+                <img src="../img/comercio.jpg" alt="Comércio">
+                <img src="../img/cultura..jpg" alt="Cultura">
+            </section>    
+            <!-- Click - usado para mudar de aba, requisito do trabalho
+            tabs - API jQuery UI, usado para criar abas, requisito do trabalho -->
+            <section class="aboutSP">
+                <div class="TabControl">
+                    <div id="header">
+                        <ul class="abas">
+                            <li>
+                                <div class="aba"><span>SAÚDE</span></div>
+                            </li>
+                            <li>
+                                <div class="aba"><span>EDUCAÇÃO</span></div>
+                            </li>
+                            <li>
+                                <div class="aba"><span>COMÉRCIO</span></div>
+                            </li>
+                            <li>
+                                <div class="aba"><span>CULTURA</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content">
+                        <div class="conteudo"><br>
+                            <p>31|01|2020 - Definição dos hospitais de referência para o tratamento de casos grave;</p><br>
+                            <p>28|02|2020 - Repasse de R$ 30 milhões para ações imediatas de combate ao coronavírus;</p><br>
+                            <p>23|03|2020 - Abertura de prédio exclusivo do Hospital das Clínicas para pacientes de coronavírus;</p><br>
+                            <a href="http:///www.saopaulo.sp.gov.br/spnoticias/saiba-quais-as-medidas-do-governo-de-sp-para-o-combate-ao-coronavirus-2/" target="_blank" rel="noopener noreferrer"><p>Ver todas</p></a>
+                        </div>
+                        <div class="conteudo"><br>
+                            <p>13|03|2020 - Anúncio do fechamento gradual das escolas estaduais em todo o Estado;</p><br>
+                            <p>25|03|2020 - Programa Merenda em Casa;</p><br>
+                            <p>03|04|2020 - Aulas em tempo real por TV aberta e celular;</p> <br>
+                            <p>16|04|2020 - Entrega de kit pedagógico pela Educação;</p> <br> 
+                            <a href="http:///www.saopaulo.sp.gov.br/spnoticias/saiba-quais-as-medidas-do-governo-de-sp-para-o-combate-ao-coronavirus-2/" target="_blank" rel="noopener noreferrer"><p>Ver todas</p></a>
+                        </div>
+                        <div class="conteudo"><br>
+                            <p>13|03|2020 - Oferta de crédito, suspensões, isenções e empreendedorismo;</p><br>
+                            <p>19|03|2020 - Suspensão do protesto de dívidas de pessoas físicas e empresas por 90 dias;</p><br>
+                            <p>03|02|2021 - Suspensão de corte de fornecimento de gás e água nos estabelecimentos comerciais;</p><br>
+                            <a href="http:///www.saopaulo.sp.gov.br/spnoticias/saiba-quais-as-medidas-do-governo-de-sp-para-o-combate-ao-coronavirus-2/" target="_blank" rel="noopener noreferrer"><p>Ver todas</p></a>
+                        </div>
+                        <div class="conteudo"><br>
+                            <p>29|05|2020 - Cinema drive-in;</p><br>
+                            <p>26|08|2020 - Novo pacote cultural ProAC Expresso 2020;</p><br>
+                            <p>28|08|2020 - 1ª Mostra Internacional de Cinema Virtual;</p><br>
+                            <p>16|09|2020 - Renda emergencial para profissionais de cultura;</p><br>
+                            <a href="http:///www.saopaulo.sp.gov.br/spnoticias/saiba-quais-as-medidas-do-governo-de-sp-para-o-combate-ao-coronavirus-2/" target="_blank" rel="noopener noreferrer"><p>Ver todas</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Campo genérico  - aberto para digitação, requisito do trabalho 
+                    focus e blur - usado nos inputs do formulário, requisito do trabalho-->
+                    <form action="#" id="myForm">
+                    <label for="atualização">Última atualização: </label>
+                            <input type="number" placeholder="Dia" min="1" max="31" required class="inptus">
+                            <input type="number" placeholder="Mês" min="1" max="12" required class="inptus">
+                            <input type="number" placeholder="Ano" min="2020" max="2021" required class="inptus"><br>
+                            <label for="nome">Responsável: </label>
+                            <input type="text" placeholder="Nome Completo" id="nome" required class="inputs" autocapitalize required>
+                            <label for="nome">Senha: </label>
+                            <input type="password" placeholder="Senha" size="4" minlength="4" maxlength="4" required class="inptus"><br>
+                            <button type="submit" id="botao">Registrar</button>
+                        </form>
+                </div>
+        <!-- ------------------------------------------------------------------------------------------------ -->
+            </section>
+            <!-- separador -->
+            <section class="separador"><img src="../img/separador.png" alt="Separador"></section>
+        <!-- ------------------------------------------------------------------------------------------------ -->
+            <!-- desenvolvedoras -->
+            <section class="tituloDevs">
+                <h2>Equipe de desenvolvedoras</h2>
+            </section>
+            <section class="devAna">
+                <div class="bordaImg"><img src="../img/ana.jpg" alt="Ana Caroline" class="imgDevs"></div>
+                <div><h3 class="nameDevs">Ana Caroline</h3></div>
+                <div><p class="sobreDevs">Comunicativa, apaixonada pela família e pelos estudos. Após formar em Full Stack Developer, deseja se especializar em back-end.</p></div>
+            </section>
+            <section class="devVitoria">
+                <div class="bordaImg"><img src="../img/viitoria.jpg" alt="Vitória Maria" class="imgDevs"></div>
+                <div><h3 class="nameDevs">Vitória Maria</h3></div>
+                <div><p class="sobreDevs">Focada, estudiosa e reservada. Reconhecida pelos bons resultados como Front-end, segue estudando para ser formar em Full Stack Developer.</p></div>
+            </section>
+            <section class="devBruna">
+                <div class="bordaImg"><img src="../img/bruna.jpg" alt="Bruna Mazzaron" class="imgDevs"></div>
+                <div><h3 class="nameDevs">Bruna Mazzaron</h3></div>
+                <div><p class="sobreDevs">Ama viajar, ler livros e estudar! Finalizando a formação em Full Stack Developer, pretende se especializar em Front-end.</p></div>
+            </section>
+            <section class="devTalita">
+                <div class="bordaImg"><img src="../img/taliita.jpeg" alt="Talita Fernandes" class="imgDevs"></div>
+                <div><h3 class="nameDevs">Talita Fernandes</h3></div>
+                <div><p class="sobreDevs">Organizada e comunicativa, está estudando na SoulCode para se formar em Full Stack Developer. É amante de rock, moto, amigos e família.</p></div>
+            </section>
+            <section class="devLuciane">
+                <div class="bordaImg"><img src="../img/lu.jpg" alt="Luciane" class="imgDevs"></div>
+                <div><h3 class="nameDevs">Luciane</h3></div>
+                <div><p class="sobreDevs">Gentil, prestativa e dedicada, se reveza entre os estudos na SoulCode e o lazer com sua família. Destaque tanto em Front-end como back-end.</p></div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <img src="../img/logosp.png"/>
+            </div>
+    
+            <div id="divfooter2">
+                <h3>REDES SOCIAIS</h3>            
+                <figure>
+                    <a href="https://twitter.com/prefsp" target="_blank"><img src="../img/iconface.png" alt=""></a>
+                    <a href="https://www.facebook.com/PrefSP" target="_blank"><img src="../img/iconinst.png" alt=""></a>
+                    <a href="https://www.instagram.com/prefsp/?hl=en" target="_blank"><img src="../img/icontwit.png" alt=""></a>
+                </figure>
+            </div>
+    
+            <div id="divfooter3">
+                <h3>ENDEREÇO/CONTATO</h3> 
+                <p>Viaduto do Chá, 15 - Centro Histórico de SP</p>
+                <p>São Paulo - SP, 01002-900</p>
+                <p>(11) 3113-8000</p>
+            </div>
+        </footer>
+
+        <script src="../js/sobreNos.js"></script>        
+    </body>
+</html>

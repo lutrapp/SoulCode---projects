@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azulClaro: #3AA1A6;
+    --azulMedio: #3B9AA7;
+    --mostarda: #FFB121;
+    --offWhite: #f8f8f8;
+    --areia: #E7D2CC;
+    --vermelho: rgb(206, 48, 48);
+    --cinzaClaro: #dcdcdc;
+    --cinzaEscuro: hsl(0, 1%, 27%);
+    --cinzaLetras: rgb(15, 15, 15);
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--cinzaClaro);
+}
+
+/* HEADER BRANCO COM LOGO SP */
+header {
+    height: 20vh;
+    background-color: var(--offWhite); 
+ }
+
+ header img {
+     width: 400px;
+ }
+
+/* MENU DE NAVEGAÇÃO */
+ nav {
+     height: 15vh;
+     background-color: var(--azulMedio);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+ nav ul {
+    width: 100%;
+    margin-left: 10%;
+}
+
+ nav li {
+     display: inline-block;
+     padding: 0 10px 0 10px;
+     font-size: 18px;
+     justify-content: center;
+ }
+
+ nav li a {
+     color: white;
+     text-decoration: none;
+     text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+ }
+
+ nav li a:hover {
+     color: var(--mostarda);
+     font-weight: bolder;
+ }
+
+ nav button {
+    margin-right: 10%;
+    height: 6vh;
+    width: 20%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--mostarda);
+    border: none;
+    border-radius: 20px;       
+    text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+}
+
+ nav button a{
+     color: white;
+     text-decoration: none;
+ }
+
+ nav button a:hover{
+     font-weight: bolder;
+     font-size: 20px;       
+ }
+
+/* BARRA DE ACESSIBILIADE FIXADA */
+ #barraFixada {
+     height: 10vh;
+     background-color: var(--azulClaro);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #barraFixada li {
+     display: inline-block;
+     padding: 0 2px 0 2px;
+     color: white;
+     
+ }
+
+ #barraFixada ul {
+     font-size: 22px;
+ }
+
+ #aumentar {
+     cursor: pointer;
+ }
+ 
+ #barraPesquisa{
+     background-color: white;
+     border-radius: 4px;
+     height: 4vh;
+     border: 1px solid #8a8a8a;
+     width: 15%; 
+     margin: 0 50px 0 50px;       
+   }
+   
+   #buscar{
+     padding-left: 5px;
+     font-style: italic;
+     font-size: 18px;    
+     height: 4vh;
+     width: 83%;
+     border: none;        
+     float: left; 
+     border-radius: 4px;      
+   }
+
+   #lupa {
+       height: 4vh;
+       float: right;
+       cursor: pointer;
+       background-color: white;
+       border-radius: 4px;
+   }
+
+section{
+    width: 80%;
+    margin: auto; 
+    padding-top: 40px;   
+}
+h1, h3 {
+    text-align: center;
+}
+
+/* barra de progresso */
+#progress {
+    background-color: var(--mostarda);
+    padding: 1%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    margin: auto;
+    top: 0px;
+    width: 79%;
+}
+
+#progressOut{
+    border: 1px solid;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: none;
+}
+#progressIn{
+    border: 1px solid;
+    height: 40px;
+    width: 0%;
+    background-color: var(--azulMedio);
+    justify-content: left;
+    border: none;
+}
+
+/* -----------------------------FORMULÁRIO COMEÇO------------------------------------------ */
+
+.container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-auto-rows: min-content(120px, auto);
+    border: 1px solid;
+    font-size: 1rem;
+    gap: 20px;
+    border-radius: 5px;
+    border: none;
+    color: var(--cinzaLetras);
+}
+
+.container div {
+    background-color: var(--offWhite);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div#imc {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-auto-rows: min-content(120px, auto);
+    border: 1px solid;
+    border: none;
+}
+
+/* div para imprimir imc */
+#imc div:nth-child(2):not(#nomeForm){
+    width: 85%;
+
+}
+
+div#imc div:nth-child(3){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#imgImc {
+    width: 100%;
+    border-radius: 3px;
+    transition: .8s;
+}
+#imgImc:hover {
+    cursor: pointer;
+    transform: scale(1.05) ;
+}
+
+
+input, select {
+    width: 70%;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: var(--cinzaClaro);
+}
+
+#susForm {
+    color: var(--cinzaLetras);
+}
+
+#imgSus {
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline-style: none;
+}
+input#sus  {
+    width: 90%;
+}
+
+#susForm #sus,
+#susForm label,
+#susForm #numeroSus{
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* caixinha de seleção */
+#vacinas input, #comorbidades input {
+    width: 20px;
+}
+
+div#comorbidades,
+div#vacinas {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 240px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: var(--azulMedio);
+    border: ridge;
+    cursor: pointer;
+    transition: 1s;
+    justify-content: left;
+    padding: 3px;
+}
+button:hover {
+    color: var(--mostarda);
+}
+/* botao da parte inferior */
+#btnEnviar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#enviar {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--azulClaro);
+    transition: 0.8s;
+    cursor: pointer;
+}
+#enviar:hover {
+    color: var(--offWhite);
+}
+
+/* fica visível via função jquery */
+#gestanteForm label{
+    visibility: hidden;
+}
+#gestanteForm select{
+    visibility: hidden;
+}
+
+/* formulario que trará dadps do usuário e fase de vacinação */
+
+#faseUsuario {
+    visibility: hidden;
+    background-color: var(--azulClaro);
+    color: var(--cinzaClaro);
+    font-size: 1.2rem;
+    width: 77%;
+    padding: 2%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--azulMedio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 70%; 
+}
+
+#divfooter2 { 
+    flex-direction: column;  
+ }
+
+footer h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#divfooter3 {
+    flex-direction: column; 
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+figure img {
+    padding: 5px 0 15px 0;
+}
+
+footer p {
+    font-size: 15px;
+    color: white;
+}
+
+
+
+/* ACESSIBILIADE */
+li.mais {
+    font-size: 30px;
+}
+
+button.mais {
+    font-size: 23px;
+}
+
+nav li.mais {
+    font-size: 25px;
+}

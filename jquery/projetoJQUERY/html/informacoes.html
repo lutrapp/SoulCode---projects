@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+        <meta name="author" content="Bruna Mazzaron, Luciane Trap, Talita, Vitoria">
+        <link rel="stylesheet" href="../css/informacoes.css">
+        <script src="../libs/jquery-3.6.0.min.js"></script>
+        <script src="../libs/jquery-1.5.0.js"></script>
+        <title>Informações</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="../img/logosp.png" alt="Logo da cidade de São Paulo"/>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>INÍCIO</strong></a></li>
+                <li><a href="sobreNos.html"><strong>SOBRE NÓS</strong></a></li>
+                <li><a href="informacoes.html" style="color: #FFB121;"><strong>INFORMAÇÕES</strong></a></li>
+                <li><a href="ocupacao.html"><strong>OCUPAÇÃO</strong></a></li>
+                <li><a href="form.html"><strong>CADASTRO</strong></a></li>
+            </ul>
+
+            <button><a href="form.html">Cadastre-se</a></button>               
+        </nav>
+
+        <div id="barraFixada">
+            <ul>
+                <li id="normal"></li>
+                <li id="aumentar">- A +</li>
+            </ul>
+            
+            <div id="barraPesquisa">
+                <input type="text" id="buscar" placeholder="Buscar no site..."/>
+                <img src="../img/lupa.png" id="lupa" alt="Ícone lupa"/>
+            </div>
+
+            <div id="dataehora">
+                <ul> 
+                    <li id="data"></li>       
+                    <li id="hora"></li>
+                </ul> 
+            </div>
+        </div>
+
+        <main>
+            <section id="container2">
+                <div class="box1">
+                    <h3>Vacinas:</h3>
+                    <hr>
+                    <p class="paragrafo">As vacinas são uma nova ferramenta essencial para acabar com o COVID-19 e é muito encorajador ver quantas delas estão em desenvolvimento e os bons resultados alcançados em alguns casos. Em todo o mundo, pesquisadores estão trabalhando o mais rápido possível, colaborando e inovando para que tenhamos os testes, tratamentos e vacinas que juntos vão salvar vidas e acabar com esta pandemia.</p>
+                </div> 
+
+                <section class="aboutSP">
+                    <div class="TabControl">
+                        <div id="header">
+                            <ul class="abas">
+                                <li>
+                                    <div class="aba"><span>BRASIL</span></div>
+                                </li>
+                                <li>
+                                    <div class="aba"><span>GLOBAL</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="content">
+                            <div class="conteudo"><img src="../img/brasil.png" alt="brasil"> 
+                                <ul>
+                                    <li>Doses aplicadas: 45,3 mi</li>
+                                    <li>Pessoas totalmente vacinadas: 14,6 mi</li>
+                                    <div id="data-hora"></div>
+                                </ul>
+                            </div>
+                            <div class="conteudo"><img src="../img/rede-global.png" alt="GLOBAL">
+                                <ul>
+                                    <li>Doses aplicadas: 1,2 bi</li>
+                                    <li>Pessoas totalmente vacinadas: 285 mi</li>
+                                    <div id="data-hora"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <div class="box2">
+                    <ul class="acordeao">
+                        <li class="acordeao-item acordeao-item_2">
+                          <h4 class="acordeao-item-titulo">Como funcionam as vacinas?</h4>
+                          <p class="acordeao-item-conteudo"><iframe width="560" height="315" src="https://www.youtube.com/embed/5yZImk2E4VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </p>
+                        </li>
+                        <li class="acordeao-item">
+                          <h4 class="acordeao-item-titulo">Como as vacinas são desenvolvidas?</h4>
+                          <p class="acordeao-item-conteudo"> <iframe width="560" height="315" src="https://www.youtube.com/embed/j68cGjHdfu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                        </li>
+                        <li class="acordeao-item">
+                          <h4 class="acordeao-item-titulo">Os diferentes tipos de vacinas que existem?</h4>
+                          <p class="acordeao-item-conteudo"><iframe width="560" height="315" src="https://www.youtube.com/embed/L9CKfoAB7PM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
+                        </li>
+                      </ul>
+                </div>
+            </section>
+            <section id="container3" class="anime anime-start"> <!--Class resposável pelo efeito scroll-->
+                    <div class="box3"><h2>Vacinas aprovadas</h2></div>
+                    <div class="box4"><img class="imagemVacina1" src="../img/imgBrunaVacina1.png" width="300px" height="400px"></div>
+                    <div class="box5"><h3>Oxford-Astrazeneca</h3>
+                    <hr>
+                        <p>
+                            A vacina britânica Oxford-Astrazeneca utiliza uma tecnologia biomolecular baseada no chamado “vetor viral”, que consiste na utilização de um vírus modificado para estimular o sistema imunológico na produção de anticorpos contra o novo coronavírus. Na fabricação da vacina, uma espécie de vírus enfraquecido (adenovírus ChAdOx1), conhecido por causar gripe comum em chimpanzés, após ser modificado para não se multiplicar, carrega parte do material genético do SARS-CoV-2 responsável pela produção de uma proteína (“Spike”) que auxilia o vírus da COVID-19 a invadir as células humanas.
+                        </p>
+                    </div>
+                    <div class="box6"><img class="imagemVacina1" src="../img/imgBrunaVacina3.png" width="300px" height="330px" ></div>
+                    <div class="box7"><h3>CoronaVac</h3>
+                    <hr>
+                        <p>
+                            A vacina CoronaVac, desenvolvida pela empresa biofarmacêutica chinesa Sinovac Biotech e produzida no Brasil pelo Instituto Butantan, em São Paulo, tem como expectativa a produção de cerca de 1 milhão de doses por dia. Essa vacina foi testada em mais de 12 mil voluntários entre 18 e 59 anos, não apresentou efeitos colaterais graves em nenhum deles e apenas 35% dos voluntários apresentaram algum tipo de reação adversa, porém todas elas classificadas como em grau leve, como dor local e febre baixa.
+                        </p>
+                    </div>
+                    <div class="box8"><img class="imagemVacina1" src="../img/imgBrunaVacina2.png" width="300px" height="330px"></div>
+                    <div  class="box9"><h3>Pfizer</h3>
+                    <hr>
+                        <p> Assim, em parceria com a BioNTech, a Pfizer desenvolveu e testou uma vacina à base de mRNA* para combater o vírus SARS-CoV-2. Os resultados promissores fizeram com que as companhias buscassem, desde novembro de 2020, a submissão contínua ou uso emergencial junto a diversos órgãos regulatórios. Em 23 de fevereiro de 2021, a ANVISA concedeu o registro definitivo à vacina para prevenção da COVID-19 desenvolvida em parceria pelos laboratórios Pfizer e BioNTech.</p>
+                    </div>
+                    <div class="box8"><img class="imagemVacina1" src="../img/vacina.png" width="300px" height="320px"></div>
+                    <div  class="box9"><h3>ButanVac</h3>
+                    <hr>
+                        <p>
+                            A Butanvac, nome do novo imunizante produzido pelo Instituto Butantan, foi anunciada em coletiva na manhã desta sexta-feira (26) por Dimas Covas, diretor da entidade.
+                            O imunizante 100% brasileiro vai utilizar a mesma tecnologia que já é aplicada na vacina da gripe. O Instituto Butantan, que ficará responsável por sua fabricação, domina completamente essa plataforma: é o maior produtor do imunizante contra a gripe na América Latina e entrega 80 milhões de doses anualmente.
+                        </p>
+                    </div>
+            </section>
+            <section id="container4">
+                        <div class="box10"> <h3> Eficácia das vacinas: </h3></div>
+                        <div class="box11 item1"> <h4>Oxford-Astrazeneca</h4>
+
+                            <ul>
+                                <li>Método de administração: Injeção intramuscular</li>
+                                <li>A eficácia geral da vacina ficou em 79%</li>
+                                <li>Aplicação de 2 doses</li>
+                            </ul>
+
+                        </div>
+                        <div class="box12 item1"><h4>CoronaVac</h4>
+
+                            <ul>
+                                <li>Método de administração: Injeção intramuscular</li>
+                                <li>A eficácia geral da vacina ficou em 50,38%</li>
+                                <li>Aplicação de 2 doses</li>
+                            </ul>
+
+                        </div>
+                        <div class="box13 item1"><h4>Pfizer</h4>
+                            <ul>
+                                <li>Método de administração: Injeção intramuscular</li>
+                                <li>A eficácia geral da vacina ficou em 90%</li>
+                                <li>Aplicação de 2 doses</li>
+                            </ul>
+                        </div>
+                        <div class="box14 item1"><h4>ButanVac</h4>
+                            <ul>
+                                <li>Método de administração: Injeção intramuscular</li>
+                                <li>A eficácia geral da vacina ficou em 95%</li>
+                                <li>Aplicação de 2 doses</li>
+                            </ul>
+                        </div>
+                </section>
+            <section id="container5">
+                <div class="caixa"><h3>Protocolos de combate adotados:</h3>
+                </div>
+                <div class="modal">  <!---->
+                    <div class="modal_content">
+                        <img src="../img/1.png" id="modal_img"> <!--PARA QUANDO CLICAR-->
+                    </div>
+                </div>
+                    <div class="container">
+                        <div class="row"> 
+                            <div class="card_img"> <!---->
+                                <img src="../img/1.png" class="small_img">
+                            </div>
+                            <div class="card_img">
+                                <img src="../img/2.png" class="small_img">
+                            </div>
+                            <div class="card_img">
+                                <img src="../img/3.png" class="small_img">
+                            </div>
+                            <div class="card_img">
+                                <img src="../img/4.png" class="small_img">
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="card_img">
+                                    <img src="../img/5.png" class="small_img">
+                                </div>
+                                <div class="card_img">
+                                    <img src="../img/6.png" class="small_img">
+                                </div>
+                                <div class="card_img">
+                                    <img src="../img/7.png" class="small_img">
+                                </div>
+                                <div class="card_img">
+                                    <img src="../img/8.png" class="small_img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="container6">
+                <div class="box15"> <h3> Autocuidado: </h3>
+                   <h4>Após a exposição a uma pessoa com COVID-19, siga estas orientações:</h4>
+                   <hr>
+                    <ul>
+                        <li>Ligue para seu prestador de cuidados de saúde ou para uma central de informações sobre a doença para descobrir onde e quando você pode fazer um teste.</li>
+                        <li>Enquanto estiver em quarentena, não vá ao trabalho, à escola ou a espaços públicos. Peça para alguém levar itens essenciais até você.</li>
+                        <li>Fique em um cômodo separado dos outros membros da sua família. Se isso não for possível, use máscara.</li>
+                        <li>Mantenha o ambiente bem ventilado.</li>
+                        <li>Preste atenção por 14 dias para ver se você apresenta sintomas.</li>
+                        <li>Ligue para o prestador de cuidados de saúde imediatamente se você apresentar qualquer um destes sintomas: dificuldade para respirar, perda da fala ou da mobilidade, confusão ou dores no peito.</li>
+                    </ul>
+                </div>
+                <div class="box16"> <h3> Tratamentos: </h3>
+                    <h4>Tratamentos médicos:</h4>
+                    <hr>
+                    <ul>
+                        <li>Os tratamentos paliativos mais indicados incluem oxigênio, para casos mais graves e pacientes de alto risco devido a outras doenças, e suportes respiratórios, como ventilação, para pacientes em estado crítico.</li>
+                        <li>A Dexametasona é um corticosteroide que pode ajudar a reduzir o tempo de ventilação e salvar as vidas de pacientes em situação mais grave.</li>
+                    </ul>
+                </div>
+            </section>  
+        </main>
+        <footer>
+            <div>
+                <img src="../img/logosp.png"/>
+            </div>
+    
+            <div id="divfooter2">
+                <h3>REDES SOCIAIS</h3>            
+                <figure>
+                    <a href="https://twitter.com/prefsp" target="_blank"><img src="../img/iconface.png" alt=""></a>
+                    <a href="https://www.facebook.com/PrefSP" target="_blank"><img src="../img/iconinst.png" alt=""></a>
+                    <a href="https://www.instagram.com/prefsp/?hl=en" target="_blank"><img src="../img/icontwit.png" alt=""></a>
+                </figure>
+            </div>
+    
+            <div id="divfooter3">
+                <h3>ENDEREÇO/CONTATO</h3> 
+                <p>Viaduto do Chá, 15 - Centro Histórico de SP</p>
+                <p>São Paulo - SP, 01002-900</p>
+                <p>(11) 3113-8000</p>
+            </div>
+        </footer>
+        <script src="../js/scriptInformacoes.js"></script>
+    </body>
+</html>

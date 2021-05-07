@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azulClaro: #3AA1A6;
+    --azulMedio: #3B9AA7;
+    --mostarda: #FFB121;
+    --offWhite: #f8f8f8;
+    --areia: #E7D2CC;
+    --vermelho: rgb(206, 48, 48);
+    --cinzaClaro: #dcdcdc;
+    --cinzaEscuro: rgb(71, 69, 69);
+    --cinzaLetras: rgb(15, 15, 15);
+    /* fases */
+    --faseVermelha:#e62e2d;
+    --faseLaranja:#f2bf11;
+    --faseAmarela:#fdff00;
+    --faseVerde:#54b151;
+    --faseAzul:#4472c4;
+
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* HEADER BRANCO COM LOGO SP */
+header {
+    height: 20vh;
+    background-color: var(--offWhite); 
+ }
+
+ header img {
+     width: 400px;
+ }
+
+/* MENU DE NAVEGAÇÃO */
+ nav {
+     height: 15vh;
+     background-color: var(--azulMedio);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ nav ul {
+    width: 100%;
+    margin-left: 10%;
+   
+}
+
+ nav li {
+     display: inline-block;
+     padding: 0 10px 0 10px;
+     font-size: 18px;
+ }
+
+ nav li a {
+     color: white;
+     text-decoration: none;
+     text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+ }
+
+ nav li a:hover {
+     color: var(--mostarda);
+     font-weight: bolder;
+ }
+
+ nav button {
+    margin-right: 10%;
+    height: 6vh;
+    width: 20%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--mostarda);
+    border: none;
+    border-radius: 20px;       
+    text-shadow: 0.5px 0.5px 1px var(--cinzaEscuro);
+}
+
+ nav button a{
+     color: white;
+     text-decoration: none;
+ }
+
+ nav button a:hover{
+     font-weight: bolder;
+     font-size: 20px;       
+ }
+
+/* BARRA DE ACESSIBILIADE FIXADA */
+ #barraFixada {
+     height: 10vh;
+     background-color: var(--azulClaro);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #barraFixada li {
+     display: inline-block;
+     padding: 0 2px 0 2px;
+     color: white;    
+ }
+
+ #barraFixada ul {
+     font-size: 22px;
+ }
+
+ #aumentar {
+     cursor: pointer;
+ }
+ 
+ #barraPesquisa{
+     background-color: white;
+     border-radius: 4px;
+     height: 4vh;
+     border: 1px solid #8a8a8a;
+     width: 15%; 
+     margin: 0 50px 0 50px;       
+   }
+   
+   #buscar{
+     padding-left: 5px;
+     font-style: italic;
+     font-size: 18px;    
+     height: 4vh;
+     width: 83%;
+     border: none;        
+     float: left; 
+     border-radius: 4px;      
+   }
+
+   #lupa {
+       height: 4vh;
+       float: right;
+       cursor: pointer;
+       background-color: white;
+       border-radius: 4px;
+   }
+
+/* FIM MENU */
+body {
+    background-color: var(--cinzaClaro);
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    font-size: 1.4rem;
+}
+
+main {
+    padding-top: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+/* info fase azul */
+#faseAzul1, #faseAzul2 {
+    width: 180px;
+    height: 100px;
+    float: right;
+    border-radius: 10px;
+    background-color: var(--faseAzul);
+    color: var(--offWhite);
+    display: flex;
+   text-align: center;
+   align-items: center;
+   margin: 1%;
+   position: fixed;
+   padding: 1% 0 1% 0;
+    cursor: pointer;
+}
+#faseAzul1 {
+    top: 41.5%;
+    right: 0;
+}    
+
+#faseAzul2 {
+    display: none;
+    height: max-content;
+    border-radius: 10px;
+    right: 0;
+    font-size: .8rem;
+}
+
+/* informativo critérios */
+#criterios1, #criterios2 {
+    width: 180px;
+    height: 100px;
+    float: left;
+    border-radius: 10px;
+    background-color: var(--mostarda);
+    color: var(--cinzaEscuro);
+    display: flex;
+   text-align: center;
+   align-items: center;
+   margin: 1%;
+   position: fixed;
+   padding: 1% 0 1% 0;
+   cursor: pointer;
+}
+#criterios1 {
+    top: 41.5%;
+    left: 0;
+}    
+
+#criterios2 {
+    display: none;
+    height: max-content;
+    border-radius: 10px;
+    left: 0;
+    font-size: .8rem;
+}
+#criterios p {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#criterios2 p span:nth-child(1){
+    background-color: var(--faseVermelha);
+}
+#criterios2 p span:nth-child(2){
+    background-color: var(--faseLaranja);
+    color: var(--cinzaLetras);
+}
+#criterios2 p span:nth-child(3){
+    background-color: var(--faseAmarela);
+    color: var(--cinzaLetras);
+}
+#criterios2 p span:nth-child(4){
+    background-color: var(--faseVerde);
+}
+
+/* fim divs fixas */
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: var(--cinzaClaro);
+    margin: auto;
+    grid-auto-rows: minmax(300px, auto);
+    gap: 20px;
+}
+
+/* grid dentro de container */
+#taxaTexto {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#taxas{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mostarda);
+    height: 200px;
+    padding: 1%;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+}
+
+#taxas #taxaUti{
+    background-image: url(../img/uti_3.png);
+}
+/* divs que contem imagens e alinha os inputs e texto*/
+#taxaEnfermaria, #taxaUti {
+    background-image: url(../img/enfermaria_3.png);
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: auto;
+}
+
+span#useMascara {
+    position: absolute;
+    visibility: hidden;
+    top: 81%;
+    left: 72%;
+}
+span#useMascara img{
+    position: relative;
+    height: 130px;
+}
+/* textos que aparecem no lugar das imagens ao enviar os valores de input */
+/* #infoFases {
+    position: absolute;
+} */
+
+#taxaEnfermaria p, #taxaUti p {
+    color: var(--cinzaEscuro);
+    font-size: 1.1rem;
+    /* margin-right: 10px; */
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    border-radius: 5px;
+}
+
+#taxaEnfermaria p:hover, #taxaUti p:hover{
+    color: black;
+}
+
+#taxaUti input, #taxaEnfermaria input{
+    background-color: var(--cinzaEscuro);
+    color: var(--offWhite);
+    font-size: 1.2rem;
+    width: 25%;
+    visibility: hidden;
+    text-align: center;
+    border-radius: 5px;
+    outline-style: none;
+}
+
+/* texto que aparece informando os dados digitados no input */
+span#info {
+    display: none;
+    text-align: center;
+    background-color: var(--cinzaEscuro);
+    color: var(--offWhite);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+span#infoFase{
+    display:none;
+}
+
+/* conteúdo oculto que aparecerá com eventos no js */
+.infoFases {
+    display:none;
+    border-radius: 10px;
+}
+
+/* botao oculto, aparece ao modificar a cor de fundo */
+#btnNovosDados {
+    display: none;
+}
+
+#btnNovosDados, #btnVerifica {
+    background-color: var(--cinzaEscuro);
+    color: var(--offWhite);
+    padding:2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: auto;
+    border: none;
+    /* padding: 5px; */
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#btnNovosDados:hover, #btnVerifica:hover {
+    border: 1px solid #54b151;
+    transition: .8s;
+}
+
+#btnVerifica {
+    display: flex;
+
+}
+
+/* tabela */
+section#tabela {
+    display: flex;
+    justify-content: center;
+}
+table {
+    visibility: hidden;
+    width: 60%;
+    margin-top: 20px;
+}
+
+th{
+    background-color: var(--cinzaClaro);
+    padding: 1%;
+}
+
+td{
+    display: flex;
+    width: 98.5%;
+    flex-direction: row;
+    justify-content: right;
+    padding: 1%;
+    border: outset;
+}
+
+
+/* classes dos detalhes coloridos na tabela */
+.check,
+.cross,
+.aDefinir,
+.restricoes {
+    width: 60px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: .7rem;
+}
+
+.restricoes,
+.aDefinir {
+    width: 160px; 
+}
+
+.check {
+    background-color: var(--faseVerde);
+} 
+
+.cross {
+    background-color: var(--faseVermelha);
+}
+
+.restricoes {
+    background-color: var(--faseAmarela);
+}
+
+.aDefinir {
+    background-color: var(--offWhite);
+}
+
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--azulMedio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 70%; 
+}
+
+#divfooter2 { 
+    flex-direction: column;  
+ }
+
+footer h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#divfooter3 {
+    flex-direction: column; 
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+figure img {
+    padding: 5px 0 15px 0;
+}
+
+footer p {
+    font-size: 15px;
+    color: white;
+}
+
+/* ACESSIBILIADE */
+li.mais {
+    font-size: 30px;
+}
+
+button.mais {
+    font-size: 25px;
+}
+
+nav li.mais {
+    font-size: 25px;
+}

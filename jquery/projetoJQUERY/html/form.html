@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/form.css" />
+        <script src="../libs/jquery-1.5.0.js"></script>
+        <script src="../libs/jquery-3.6.0.min.js"></script>
+        <title>Formulário de Cadastro</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="../img/logosp.png" alt="Logo da cidade de São Paulo" />
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>INÍCIO</strong></a></li>
+                <li><a href="sobreNos.html"><strong>SOBRE NÓS</strong></a></li>
+                <li><a href="informacoes.html"><strong>INFORMAÇÕES</strong></a></li>
+                <li><a href="ocupacao.html"><strong>OCUPAÇÃO</strong></a></li>
+                <li><a href="form.html" style="color: #FFB121;"><strong>CADASTRO</strong></a></li>
+            </ul>
+
+            <button><a href="form.html">Cadastre-se</a></button>
+        </nav>
+
+        <div id="barraFixada">
+            <ul>
+                <li id="normal"></li>
+                <li id="aumentar">- A +</li>
+            </ul>
+
+            <div id="barraPesquisa">
+                <input type="text" id="buscar" placeholder="Buscar no site..." />
+                <img src="../img/lupa.png" id="lupa" alt="Ícone lupa" />
+            </div>
+
+            <div id="dataehora">
+                <ul>
+                    <li id="datadata"></li>
+                    <li id="horahora"></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h1>Cadastro de Controle Vacinal</h1>
+            <h3>A vacinação é essencial para o combate à Covid-19.<br> Preencha os dados e verifique se você já pode ser
+                vacinado.</h3>
+            <!-- ao coletar as informações informar em uma div, em qual fase o usuário está ou não contemplado -->
+            <div id="faseUsuario">
+            </div>
+            <!-- barra de progresso -->
+            <div id="progress">
+                <span id="textProgress"></span>
+                <div id="progressOut">
+                    <div id="progressIn"></div>
+                </div>
+            </div>
+            <!-- Inicio da configuração HTML do Formulário de cadastro -->
+
+            <main>
+                <form id="myForm" action="">
+                    <section class="container">
+                        <div id="nomeForm">
+                            <label for="nome">Nome Completo:</label>
+                            <!-- valida nesse campo nome digitar apenas numeros ou espaço -->
+                            <input class="iform" type="text" name="nome" id="nome" placeholder="Nome Completo"
+                                onkeypress="return /[a-z]| /i.test(event.key)" autocapitalize required>
+                        </div>
+
+                        <div id="nascimentoForm">
+                            <label for="nascimento">Data de Nascimento:</label>
+                            <input type="date" name="date" id="nascimento" placeholder="Data de Nascimento 88/88/8888"
+                                required maxlength="10">
+                        </div>
+
+                        <div id="sexoForm">
+                            <label for="sexo">Sexo:</label>
+                            <select name="sexo" id="sexo">
+                                <option value="">Selecione</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                            </select>
+                        </div>
+
+                        <div id="gestanteForm">
+                            <label for="gestante">Gestante</label>
+                            <select name="gestante" id="gestante" required>
+                                <option value="">Selecione</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div id="etniaForm">
+                            <label for="etnia">Etnia:</label>
+                            <select name="etnia" id="etnia" required>
+                                <option value="">Selecione</option>
+                                <option value="branco">Branco</option>
+                                <option value="pardo">Pardo</option>
+                                <option value="preto">Preto</option>
+                                <option value="amarelo">Amarelo</option>
+                                <option value="indígena">Indígena</option>
+                                <option value="naoInformado">não informado</option>
+                            </select>
+                        </div>
+
+                        <div id="cpfForm">
+                            <label for="cpf">CPF:</label>
+
+                            <input class="iform" id="cpf" type="text" maxlength="14" placeholder="888.888.888-88"
+                                required="required">
+                        </div>
+
+                        <div id="emailForm">
+                            <label for="email">Informe seu Email:</label>
+                            <input class="iform" type="email" name="email" id="email" placeholder="Digite seu email"
+                                required="required">
+                        </div>
+
+                        <div id="profissaoForm">
+                            <label for="profissao">Profissão:</label>
+                            <select name="profissao" id="profissao" required>
+                                <option value="">Selecione</option>
+                                <option value="saude">Profissional de Saúde</option>
+                                <option value="educacao">Profissional de Educação</option>
+                                <option value="transporte">Profissional de Transporte</option>
+                                <option value="limpeza">Profissional de Limpeza/Zeladoria</option>
+                                <option value="portuario">Profissional Portuário</option>
+                                <option value="industria">Profissional de Industria</option>
+                                <option value="motorista">Motorista/Cobrador de ônibus</option>
+                                <option value="segurancaPublica">Segurança Pública/ Agente penitenciário</option>
+                                <option value="metroviario">Metroviário/ Ferroviário</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div id="susForm">
+
+                            <input maxlength="15" class="iform" id="sus" type="text"
+                                placeholder="insira aqui o número do seu cartão SUS" required="required">
+                            <p id="numeroSus">Não sabe o seu número? Clique no cartão e acesse o site</p>
+                            <a target="_blank" href="https://conectesus-paciente.saude.gov.br/menu/home"><img
+                                    id="imgSus" src="../img/cartaosus.jpeg" alt="imagem cartao sus"></a>
+                        </div>
+
+                        <div id="imc">
+                            <div>
+                                <label>Peso (kg)</label><input id="peso"><br>
+                                <label>Altura (m)</label> <input id="altura">
+
+                            </div>
+                            <div id="resultadoImc">
+                            </div>
+                            <div>
+                                <img id="imgImc" src="../img/tabela.jpeg" alt="tabela de valores imc">
+                            </div>
+                        </div>
+
+                        <div id="comorbidades">
+                            <p><b>Comorbidades</b>></p><br>
+                            <label for="comorbidades">Não tenho doenças preexistentes</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">Hipertensão arterial</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">Diabetico</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">Doença Renal</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">HIV</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">Anemia Falciforme</label>
+                            <input type="checkbox" class="checkComorbidades">
+                            <label for="comorbidades">Obesidade Morbida</label>
+                            <input type="checkbox" class="checkComorbidades">
+                        </div>
+                        <div id="vacinas">
+                            <p><b>Vacinas que já possui no cartão</b></p><br>
+                            <label for="vacinas">Dupla Adulto</label>
+                            <input type="checkbox" class="checkVacinas">
+                            <label for="vacinas">Hepatite B</label>
+                            <input type="checkbox" class="checkVacinas">
+                            <label for="vacinas">Sarampo/Caxumba/Rubéola</label>
+                            <input type="checkbox" class="checkVacinas">
+                            <label for="vacinas">Influenza-2021</label>
+                            <input type="checkbox" class="checkVacinas">
+                            <label for="vacinas">Febre Amarela</label>
+                            <input type="checkbox" class="checkVacinas">
+                            <label for="vacinas">Pneumococo</label>
+                            <input type="checkbox" class="checkVacinas">
+                        </div>
+                        <div id="btnEnviar">
+                            <input type="button" id="enviar" name="envia" value="Enviar">
+                        </div>
+
+                    </section>
+                </form>
+
+            </main>
+        </section>
+
+        <footer>
+            <div>
+                <img src="../img/logosp.png" />
+            </div>
+
+            <div id="divfooter2">
+                <h3>REDES SOCIAIS</h3>
+                <figure>
+                    <a href="https://twitter.com/prefsp" target="_blank"><img src="../img/iconface.png" alt=""></a>
+                    <a href="https://www.facebook.com/PrefSP" target="_blank"><img src="../img/iconinst.png" alt=""></a>
+                    <a href="https://www.instagram.com/prefsp/?hl=en" target="_blank"><img src="../img/icontwit.png"
+                            alt=""></a>
+                </figure>
+            </div>
+
+            <div id="divfooter3">
+                <h3>ENDEREÇO/CONTATO</h3>
+                <p>Viaduto do Chá, 15 - Centro Histórico de SP</p>
+                <p>São Paulo - SP, 01002-900</p>
+                <p>(11) 3113-8000</p>
+            </div>
+        </footer>
+        <script src="../js/form.js"></script>
+    </body>
+
+</html>

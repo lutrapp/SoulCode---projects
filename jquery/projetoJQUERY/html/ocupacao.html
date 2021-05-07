@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+        <meta name="author" content="Bruna Mazzaron, Luciane Trap, Talita, Vitoria">
+        <link rel="stylesheet" href="../css/ocupacao.css">
+        <script src="../libs/jquery-1.5.0.js"></script>
+        <script src="../libs/jquery-3.6.0.min.js"></script>
+        <title>Taxa de ocupação</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="../img/logosp.png" alt="Logo da cidade de São Paulo"/>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>INÍCIO</strong></a></li>
+                <li><a href="sobreNos.html"><strong>SOBRE NÓS</strong></a></li>
+                <li><a href="informacoes.html"><strong>INFORMAÇÕES</strong></a></li>
+                <li><a href="ocupacao.html" style="color: #FFB121;"><strong>OCUPAÇÃO</strong></a></li>
+                <li><a href="form.html"><strong>CADASTRO</strong></a></li>
+            </ul>
+
+            <button><a href="form.html">Cadastre-se</a></button>               
+        </nav>
+
+        <div id="barraFixada">
+            <ul>
+                <li id="normal"></li>
+                <li id="aumentar">- A +</li>
+            </ul>
+            
+            <div id="barraPesquisa">
+                <input type="text" id="buscar" placeholder="Buscar no site..."/>
+                <img src="../img/lupa.png" id="lupa" alt="Ícone lupa"/>
+            </div>
+
+            <div id="dataehora">
+                <ul> 
+                    <li id="datadata">?</li>       
+                    <li id="horahora">?</li>
+                </ul> 
+            </div>
+        </div>
+
+        <main>
+            <h1>Leitos - taxa de ocupação</h1>
+            <!-- início grid -->
+            <!-- divs fixas, lado esquerdo critérios, e direito fase azul -->
+            <div id="criterios1">
+                <p>
+                    Critérios da taxa de ocupação<br>
+                </p>
+                <div id="criterios2">
+                    <p>
+                        <span> Fase 1: acima de 80% (alerta máximo)<br></span>
+                        <span> Fase 2: entre 70% e 80% (controle)<br></span>
+                        <span> Fase 3: entre 60% e 70% (flexibilização)<br></span>
+                        <span> Fase 4: abaixo de 60% (alerta)<br></span>
+                    </p>
+                </div>
+
+            </div>
+            <div id="faseAzul1">
+                <p>
+                    Fase azul - entenda<br>
+                </p>
+                <div id="faseAzul2">
+                    <p>
+                        Até então, seriam três condições possíveis para avançar à fase azul: uma vacina eficaz, um
+                        remédio capaz de curar a Covid-19 ou uma diminuição significativa nos números da doença. Nessa
+                        fase as atividades voltariam a ser como eram antes da pandemia.
+                    </p>
+                </div>
+            </div>
+            <section class="container1">
+                <div id="taxaTexto">
+                    Indique a ocupação dos leitos e verifique a fase atual.<br>(considera-se: UTI: peso 6 |
+                    Enfermaria: peso 4)
+                    <button id="btnNovosDados">Inserir novos dados</button>
+                    <!-- aqui no span aparecerá os valores digitados com uma mensagem -->
+                    <span id="info"></span>
+                </div>
+                <div id="taxas">
+                    <span id="useMascara"><img src="../img/useMascara_3.png" alt=""></span>
+                    <div id="taxaUti">
+                        <p>Informe o valor</p><br>
+                        <input id="valorUti" type="number" min="0" max="100" minlength="3">
+                    </div>
+                    <div id="taxaEnfermaria">
+                        <p>Informe o valor</p><br>
+                        <input id="valorEnfermaria" type="number" min="0" max="100" maxlength="3">
+                    </div>
+                </div>
+                <button id="btnVerifica">Verificar</button>
+            </section>
+            <!-- fim grid -->
+            <!-- início tabela -->
+            <section id="tabela">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Abertura dos setores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="linha1">Espaços públicos</td>
+                        </tr>
+                        <tr>
+                            <td id="linha2">Atividades imobiliárias</td>
+                        </tr>
+                        <tr>
+                            <td id="linha3">Concessionárias</td>
+                        </tr>
+                        <tr>
+                            <td id="linha4">Escritórios</td>
+                        </tr>
+                        <tr>
+                            <td id="linha5">Bares, restaurantes e similares</td>
+                        </tr>
+                        <tr>
+                            <td id="linha6">Comércio</td>
+                        </tr>
+                        <tr>
+                            <td id="linha7">Shopping Center</td>
+                        </tr>
+                        <tr>
+                            <td id="linha8">Salão de beleza</td>
+                        </tr>
+                        <tr>
+                            <td id="linha9">Academia</td>
+                        </tr>
+                        <tr>
+                            <td id="linha10">Teatro, cinemas</td>
+                        </tr>
+                        <tr>
+                            <td id="linha11">Eventos que geram aglomeração, eventos esportivos</td>
+                        </tr>
+                        <tr>
+                            <!-- a definir -->
+                            <td id="linha12">Educação</td>
+                        </tr>
+                        <tr>
+                            <td id="linha13">Transporte</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <img src="../img/logosp.png"/>
+            </div>
+    
+            <div id="divfooter2">
+                <h3>REDES SOCIAIS</h3>            
+                <figure>
+                    <a href="https://twitter.com/prefsp" target="_blank"><img src="../img/iconface.png" alt=""></a>
+                    <a href="https://www.facebook.com/PrefSP" target="_blank"><img src="../img/iconinst.png" alt=""></a>
+                    <a href="https://www.instagram.com/prefsp/?hl=en" target="_blank"><img src="../img/icontwit.png" alt=""></a>
+                </figure>
+            </div>
+    
+            <div id="divfooter3">
+                <h3>ENDEREÇO/CONTATO</h3> 
+                <p>Viaduto do Chá, 15 - Centro Histórico de SP</p>
+                <p>São Paulo - SP, 01002-900</p>
+                <p>(11) 3113-8000</p>
+            </div>
+        </footer>
+        <script src="../js/ocupacao.js"></script>
+    </body>
+
+</html>
