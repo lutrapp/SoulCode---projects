@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <!-- 
+    
+    ---------JQuery--------
+    *função scroll com retorno suave aplicado em todas as páginas (#btnTopo);
+
+    ---------Javascript--------
+    *validação de cpf e cnpj na página faleConosco;
+
+    ---------CSS--------
+    * rodapé estilizado com css com a classe footer1 (página Inicial) e footerPages (demais páginas);
+
+    ---------HTML--------
+    *aside utilizado na página faleConosco ao lado do formulário;
+    *article utilizado na página quemSomos, na seção que apresenta as arquitetas;
+
+    ---------Bootstrap--------
+    *uso de grid container/ container fluid em todas as páginas, adequando conforme o necessário.
+    *responsividade foi desenvolvida com recursos do boostrap, em algumas imagens e seções foi necessário mediaQueries.
+    * estilo em vários lugares, botao formulário, por exemplo. Recursos de alinhamento amplamente utilizado em todas as página, mx,p, m, etc.
+  -->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Luciane Pohlod Trapp">
+    <meta name="description" content="empresa de arquitetura com tendência contemporânea">
+    <meta name="keywords"
+      content="pasillo, arquitetura contemporânea, minimalismo, Wynie António, Mariana Nunes, arquitetura minimalista">
+    <link rel="shortcut icon" href="LOGO-AZUL.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pasillo</title>
+  </head>
+
+  <body>
+    <section class="container-fluid">
+      <header id="topo" class="row py-1">
+        <nav id="menu" class="menu1 col-md-12 navbar navbar-expand-md navbar-light justify-content-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#alterna"
+            aria-controls="alterna" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="alterna">
+            <div class="navbar-nav mx-auto my-2">
+              <a class="nav-item nav-link active mx-2" href="#">Home<span class="sr-only">(Página atual)</span></a>
+              <a href="quemSomos.html" class="nav-item nav-link mx-2">Quem Somos</a>
+              <a href="servicos.html" class="nav-item nav-link mx-2">Serviços</a>
+              <a href="#menuPortfolio" class="nav-item nav-link mx-2">Portfolio</a>
+              <a href="faleConosco.html" class="nav-item nav-link mx-2">Fale conosco</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- inicio conteúdo principal -->
+      <main>
+
+        <!-- elemento div com imagem de logo, transição de elementos trabalhada em js e css (TRANSIÇÃO 1) -->
+        <div class="col-md-12 text-center divLogo">
+          <div class="imgLogoInicio text-center">
+            <a href="#menu">
+              <img src="img/logoAzul.png" alt="logo Pasillo">
+            </a>
+          </div>
+        </div>
+
+        <!-- div portfolio surge ao clicar na logo -->
+        <div id="portfolio" class="portfolio container mb-5">
+          <div class="row mb-5">
+            <div class="col-md-12 text-center my-auto">
+
+              <!-- imagem inicial que surge ao clicar na logo -->
+              <a href="#menuPortfolio">
+                <img class="img-fluid" id="imgInicial" src="img/vistaD50.png" alt="imagem de um projeto">
+              </a>
+            </div>
+          </div>
+
+          <!-- portfolio que surge ao clicar na foto -->
+          <div id="menuPortfolio" class="vejaMais mx-auto">
+            <h3>
+              Portfolio
+            </h3>
+          </div>
+
+          <div class="row">
+            <!-- imagens apenas, para destacar o trabalho realizado e a logo no topo direito para reforço de marca -->
+            <div id="carousel1" class="col-md-12 col-sm-12 carousel sliders slide carousel-fade" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/clear4.png" class="d-block mx-auto" alt="imagem de uma sala">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/clear1.png" class="d-block mx-auto" alt="imagem de uma cozinha e sala">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/topaz1quartoCriancas.png" class="d-block mx-auto" alt="imagem de quarto infantil">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/topaz2quartoCriancas.png" class="d-block mx-auto" alt="imagem de quarto infantil">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/topaz4sala.png" class="d-block mx-auto" alt="imagem de uma sala">
+                </div>
+                <!-- <div class="carousel-item">
+                  <img src="img/vistaB50_.png" class="d-block mx-auto" alt="imagem de um projeto">
+                </div> -->
+                <div class="carousel-item">
+                  <img src="img/zeke2menor.png" class="d-block mx-auto" alt="imagem de uma sala">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/quarto2.jpg" class="d-block mx-auto" alt="imagem de um quarto">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/logoFundoAzul.png" class="d-block mx-auto" alt="logomarca Pasillo com fundo azul">
+                </div>
+
+              </div>
+            </div>
+
+            <!-- fechamento de portfolio -->
+          </div>
+
+          <!-- botao voltar ao topo, surge quando rolar a página -->
+
+          <div id="btnTopo" class="btnTopo btnPaginaInicial" onclick="voltaSuave()">
+            <button class="btn">
+              <a href="#menu">
+                <i class="bi bi-arrow-up-circle">
+                </i>
+              </a>
+            </button>
+          </div>
+
+          <!-- fechamento do conteúdo principal -->
+      </main>
+
+      <!-- fechamento da seção mãe -->
+    </section>
+
+    <!-- rodapé -->
+    <footer class="footer1">
+
+      <div>
+        <span>Mariana Nunes</span>
+        <a href="https://api.whatsapp.com/send?phone=5585997410400&text=sua%20mensagem" target="_blank">
+          <i class="bi bi-whatsapp text-success"></i>
+        </a>
+        &nbsp;
+        <span>(85) 99741-0400</span>
+      </div>
+
+      <div>
+        <span>Wynie António</span>
+        <a href="https://api.whatsapp.com/send?phone=5585997942041&text=sua%20mensagem" target="_blank">
+          <i class="bi bi-whatsapp text-success"></i>
+        </a>
+        &nbsp;
+        <span>(85) 99794-2041</span>
+      </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+
+</html>

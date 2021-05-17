@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Luciane Pohlod Trapp">
+    <meta name="description" content="empresa de arquitetura com tendência contemporânea">
+    <meta name="keywords"
+      content="pasillo, arquitetura contemporânea, minimalismo, Wynie António, Mariana Nunes, arquitetura minimalista">
+    <link rel="shortcut icon" href="LOGO-AZUL.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Fale Conosco</title>
+  </head>
+
+  <body id="bodyFaleConosco">
+    <section class="container-fluid">
+      <header id="topo" class="row py-1">
+        <nav id="menu" class=" col-md-12 navbar navbar-expand-md navbar-light justify-content-center">
+          <span class="nav-brand">
+            <img class="img-fluid" src="img/logoAzul.png" alt="">
+          </span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#alterna"
+            aria-controls="alterna" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="alterna">
+            <div class="navbar-nav my-2 mx-auto">
+              <a class="nav-item nav-link" href="paginaInicial.html">Home</a>
+              <a href="quemSomos.html" class="nav-item nav-link mx-3">Quem Somos</a>
+              <a href="servicos.html" class="nav-item nav-link">Serviços</a>
+              <a href="faleConosco.htm" class="nav-item nav-link"><span class="sr-only">(Página atual - Fale
+                  Conosco)</span></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- inicio conteúdo principal -->
+      <main>
+        <section id="sectionFaleConosco" class="container mt-4">
+          <!-- linha que contém as duas colunas principais 'aside' e 'form'-->
+          <div class="row">
+            <!-- aside -->
+            <!-- medidas para responsividade das colunas de aside -->
+            <aside class="col-lg-4 col-md-4 col-sm-12 pr-5">
+              <article>
+                <p>
+                  <h5 class="pb-3" id="nomeCliente">Que bom ver você na Pasillo!</h5>
+
+                </p>
+                <p>
+                  Preencha todos os campos para um atendimento inicial personalizado!
+                </p>
+                <p>
+                  Você pode nos contatar diretamente pelo whatsapp <a
+                    href="https://api.whatsapp.com/send?phone=5585997942041&text=sua%20mensagem" target="_blank">
+                    <i class="bi bi-whatsapp text-success"></i>
+                  </a>
+                </p>
+                <p>
+                  Deixe aqui sua ideia, seu sonho ou até seu problema atual que apresentaremos para você a solução
+                  arquitetônica ideal.
+                </p>
+                <div id="msgFormularioEnviado" class="p-2 bg-light rounded">
+
+                </div>
+              </article>
+            </aside>
+
+            <!-- fim coluna lateral aside -->
+            <!-- início coluna formulario -->
+            <!-- medidas para responsividade das colunas de form -->
+
+            <form method="POST" class="form-group col-lg-8 col-md-8 col-sm-12 mt-2 px-2">
+              <div class="col-md-12 text-right text-danger">
+                <span class="text-alert"><small>* campos obrigatórios</small></span>
+              </div>
+              <div class="row mt-3">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 estiloCheck">
+                  <label for="pFisicaForm">
+                    <h6>Pessoa Física</h6>
+                  </label>
+                  <input type="checkbox" name="pfisicaForm" id="pFisicaForm">
+                  <div>
+                    <label for="cpf" class="mx-auto">
+                      <h6>CPF</h6>
+                    </label>
+                    <input type="text" class="form-control" id="cpfForm" minlength="14" maxlength="14"
+                      onkeypress="$(this).mask('000.000.000-00');">
+                  </div>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-12 estiloCheck">
+                  <label for="pJuridicaForm">
+                    <h6>Pessoa Jurídica</h6>
+                  </label>
+                  <input type="checkbox" name="pJuridicaForm" id="pJuridicaForm">
+                  <div>
+                    <label for="cnpj" class="mx-auto">
+                      <h6>CNPJ</h6>
+                    </label>
+                    <input type="text" class="form-control" id="cnpjForm"
+                      onkeypress="$(this).mask('00.000.000/0000-00')">
+                  </div>
+                </div>
+              </div>
+              <!-- fim organização campos cpf e cnpj -->
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="nome">
+                    <h6>Nome <span class="text-danger">*</span></h6>
+                  </label>
+                  <input type="text" class="form-control text-capitalize" name="nome" placeholder="Nome Completo"
+                    id="nome" required />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="cep">
+                    <h6>CEP</h6>
+                  </label>
+                  <!-- função para autocompletar o endereço via js -->
+                  <input onkeypress="$(this).mask('00.000-000')" onblur="pesquisacep(this.value)" type="text"
+                    class="form-control" name="cep" placeholder="digite apenas números" id="cep" maxlength="8" />
+                </div>
+              </div>
+              <!-- fim organização nome e cep -->
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="email">
+                    <h6>email <span class="text-danger">*</span></h6>
+                  </label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="espaco-arroba">@</span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="email" aria-label="Usuário"
+                      aria-describedby="espaco-arroba" required>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="telefone">
+                    <h6>Telefone</h6>
+                  </label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="espaco-fone">
+                        <i class="bi bi-telephone"></i>
+                      </span>
+                    </div>
+                    <input type="tel" class="form-control" placeholder="DDD + número" aria-label="fone"
+                      aria-describedby="espaco-fone" onkeypress="$(this).mask('(00) 0000-00009')">
+                  </div>
+                </div>
+              </div>
+              <!-- fim organização email e fone -->
+
+              <div class="row">
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="rua">
+                    <h6>Rua</h6>
+                  </label>
+                  <input type="text" class="form-control" name="rua" id="rua" />
+                </div>
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="numero">
+                    <h6>Número</h6>
+                  </label>
+                  <input type="text" class="form-control" name="numero" id="numero" />
+                </div>
+              </div>
+              <!-- fim organização rua e número -->
+
+              <div class="row">
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="complemento">
+                    <h6>Complemento</h6>
+                  </label>
+                  <input type="text" class="form-control" name="complemento" placeholder="complemento"
+                    id="complemento" />
+                </div>
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="bairro">
+                    <h6>Bairro</h6>
+                  </label>
+                  <input type="text" class="form-control" name="bairro" placeholder="Bairro" id="bairro" />
+                </div>
+              </div>
+              <!-- fim organização complemento e bairro -->
+
+              <div class="row">
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="cidade">
+                    <h6>Cidade</h6>
+                  </label>
+                  <input type="text" class="form-control" name="cidade" placeholder="Cidade" id="cidade" />
+                </div>
+
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="uf">
+                    <h6>Estado (UF)</h6>
+                  </label>
+                  <input type="text" class="form-control" name="uf" placeholder="Estado" id="uf" />
+                </div>
+              </div>
+              <!-- fim organização Cidade e Estado -->
+
+              <!-- abertura do grupo checkbox serviços -->
+              <div class="form-group col-md-12 col-sm-12">
+                <label for="servicos">
+                  <h6>
+                    Serviços que busco
+                  </h6>
+                </label>
+                <!-- inicio da row checkbox -->
+                <div class="row">
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 custom-checkbox estiloCheck">
+                    <label for="acessibilidadeForm">Acessibilidade
+                      <input type="checkbox" name="acessibilidadeForm" id="acessibilidadeForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 estiloCheck">
+                    <label for="interioresForm">Interiores
+                      <input type="checkbox" name="interioresForm" id="interioresForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 estiloCheck">
+                    <label for="consultoriaForm">Consultoria
+                      <input type="checkbox" name="consultoriaForm" id="consultoriaForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 estiloCheck">
+                    <label for="restauroForm">Restauro
+                      <input type="checkbox" name="restauroForm" id="restauroForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 estiloCheck">
+                    <label for="institucionalForm">Institucional
+                      <input type="checkbox" name="institucionalForm" id="institucionalForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6 estiloCheck">
+                    <label for="paisagismoForm">Paisagismo
+                      <input type="checkbox" name="paisagismoForm" id="paisagismoForm">
+                    </label>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-12 estiloCheck">
+                    <label for="estudoFachadaForm">Estudo de Fachada
+                      <input type="checkbox" name="estudoFachadaForm" id="estudoFachadaForm">
+                    </label>
+                  </div>
+                </div>
+                <!-- ^ fechamento da row checkbox -->
+              </div>
+              <!-- fim do grupo checkbox serviços -->
+
+              <div class="form-group col-lg-12 col-md-12 sm-12">
+                <label for="mensagemForm">
+                  <h6>Enviar arquivo</h6>
+                </label>
+                <input type="file" name="arquivos" multiple>
+              </div>
+              <div class="form-group col-lg-12 col-md-12 sm-12">
+                <label for="mensagemForm">
+                  <h6>Mensagem</h6>
+                </label>
+                <textarea id="mensagemForm" class="form-control col-md-12" name="mensagemForm" id=""
+                  rows="10"></textarea>
+              </div>
+              <!-- </div> -->
+              <div class="form-group text-center">
+                <button id="btnEnviar" type="button" class="btn btn-block btn-secondary btnForm mb-2" value="enviar">
+                  <span>Enviar</span>
+                </button>
+              </div>
+              <!-- </div> -->
+            </form>
+            <!-- fechamento da linha que divide as duas colunas form e aside -->
+          </div>
+
+<!-- modal Cpf inicio -->
+<div id="modalAvisoCpf" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Dados Inválidos</h5>
+
+        <!-- função para deixar o foco no campo que estava inválido -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.setTimeout(function() {document.querySelector('#cpfForm').focus();}, 200);">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="msgModalAvisoCpf"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.setTimeout(function() {document.querySelector('#cpfForm').focus();}, 200);">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal Cpf fim -->
+
+<!-- modal Cnpj inicio -->
+<div id="modalAvisoCnpj" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Dados Inválidos</h5>
+
+        <!-- função para deixar o foco no campo que estava inválido -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.setTimeout(function() {document.querySelector('#cnpjForm').focus();}, 200);">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="msgModalAvisoCnpj"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.setTimeout(function() {document.querySelector('#cnpjForm').focus();}, 200);">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal Cnpj fim -->
+
+          <!-- botao voltar ao topo, surge quando rolar a página -->
+
+          <div id="btnTopo" class="btnTopo btnFaleConosco">
+            <button class="btn">
+              <a href="#menu">
+                <i class="bi bi-arrow-up-circle">
+                </i>
+              </a>
+            </button>
+          </div>
+
+      </main>
+
+    </section>
+
+    <!-- fechamento do container section mãe -->
+    </section>
+
+    <!-- rodapé -->
+    <footer class="footerPages">
+
+      <div>
+        <span>Mariana Nunes</span>
+        <a href="https://api.whatsapp.com/send?phone=5585997410400&text=sua%20mensagem" target="_blank">
+          <i class="bi bi-whatsapp text-success"></i>
+        </a>
+        &nbsp;
+        <span>(85) 99741-0400</span>
+      </div>
+
+      <div>
+        <span>Wynie António</span>
+        <a href="https://api.whatsapp.com/send?phone=5585997942041&text=sua%20mensagem" target="_blank">
+          <i class="bi bi-whatsapp text-success"></i>
+        </a>
+        &nbsp;
+        <span>(85) 99794-2041</span>
+      </div>
+      <!-- <div>
+          Fortaleza - Ceará - Brasil - 2021
+        </div> -->
+
+    </footer>
+
+
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <!-- JavaScript (Opcional) -->
+    <script src="js/script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --blue: #34346E;
+    --mediumBlue: #2D2D3B;
+    --darkBlue: #101022;
+    --lightGray: #e6e3e3;
+    --tranparent: rgba(255, 255, 255, 0.5);
+    --blueGrey: #54546E;
+    --lightBlue: #5757BA;
+    --offwhite: #F8F8F8;
+    --black: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--blue);
+    color: var(--offwhite);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--lightBlue);
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.imgLogoInicio img {
+    width: 56%;
+    cursor: pointer;
+}
+
+
+/* ---------- pagina inicial ----------*/
+
+/* navbar início */
+header {
+    background-color: var(--offwhite);
+}
+
+header a {
+    color: var(--blueGrey);
+    font-family: 'Julius Sans One', sans-serif;
+
+}
+header a:hover {
+    color: var(--darkBlue);
+}
+/* navbar fim */
+
+/* div com a logo maior, distanciamento do topo */
+.divLogo {
+    margin-top: 2rem;
+}
+
+/* botao ativado com função scroll em 400px */
+/* formatação comum a todos os botoes volta ao topo */
+.btnTopo{
+    display: none;
+    position: fixed;
+    bottom: 5.5rem;
+    right: .5rem;
+}
+
+/* está na página quem somos */
+.btnDesce{
+    display: none;
+    position: fixed;
+    bottom: 2.5rem;
+    right: -0.3rem;
+}
+
+.btnTopo:hover {
+    border-radius: 10px;
+}
+
+/* formatação personalizada acompanhando a cor de fundo das pages */
+.btnPaginaInicial button {
+    background-color: var(--lightGray);  
+}
+
+.btnPaginaInicial button:hover {
+    background-color: var(--offwhite);  
+}
+
+.btnQuemSomos button {
+    background-color: var(--mediumBlue);  
+}
+
+.btnQuemSomos button:hover {
+    background-color: var(--lightGray);  
+}
+
+.btnServicos button {
+    background-color: var(--lightGray);  
+}
+
+.btnServicos button:hover {
+    background-color: var(--offwhite);  
+}
+
+.btnFaleConosco button {
+    background-color: var(--mediumBlue);  
+}
+
+.btnFaleConosco button:hover {
+    background-color: var(--lightGray);  
+}
+
+/* itens trabalhados (TRANSIÇÃO 1) em javascript - inicio*/
+
+.bodyGray {
+    background-color: var(--lightGray);
+    color: var(--darkBlue);
+}
+
+.portfolio {
+    display: none;
+    animation-name: imagemSurge;
+    animation-duration: 4s;
+    /* para sobrepor o espaço vazio pós animation */
+    position: relative;
+    bottom: 2rem;
+    cursor: pointer;
+}
+
+@keyframes imagemSurge {
+    0%   {opacity:0;}
+    25%  {opacity:0.5;}
+    50%  {opacity:0.8;}
+    100% {opacity:1;}
+  }
+
+.logoFixa {
+    position: fixed;
+    z-index: 1200;
+}
+
+/* menu principal da página inicial */
+.menu1 {
+    display: none;
+}
+/* footer página principal */
+.footer1 {
+    display: none;
+}
+
+/* fim transição javascript */
+  
+/* portfolio menu e carousel */
+
+/* imagem principal, que clicada dirciona para o carousel */
+.portfolio img {
+    width: 60%;
+}
+
+.portfolio a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* animação para surgir a palavra portfolio sugerindo intrinsicamente o clique */
+.vejaMais {
+    font-family: 'Julius Sans One', sans-serif;
+    margin-bottom: 1rem;
+    max-width: max-content;
+    display: none;
+    animation-name: vejaPortfolio;
+    animation-duration: 4s;
+    padding: 1rem;
+    border-radius: 5px;
+    transition-timing-function: ease-in;
+}
+
+@keyframes vejaPortfolio {
+    0%   {transform: scale(1.1); letter-spacing: 2px; opacity: 0.2;}
+    100% {transform: scale(1.5); letter-spacing: 10px; opacity: 0.7;}
+}
+
+#carousel1 img {
+    /* height: 19rem; */
+    cursor: wait;
+}
+
+
+.textoFinalPortfolio {
+    display: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px){
+    #carousel1 img
+   {
+        width: 30rem ;
+   }
+   #scrollServicos {
+       display: none;
+   }
+}
+@media (max-width: 768px){
+    #carousel1 img
+   {
+        width: 30rem ;
+   }
+   #scrollServicos {
+       display: none;
+   }
+}
+
+@media (max-width: 800px){
+    #carousel1 img
+   {
+        width: 31rem ;
+    }
+    ul.listaServicos {
+        font-size: .8rem;
+        position: fixed;
+    }
+}
+
+@media (max-width: 900px){
+    #carousel1 img
+    {
+        width: 32rem ;
+        
+    }
+}
+
+@media (max-width: 1200px){
+    #carousel1 img
+    {
+       width: 33rem ;
+   }
+}
+
+/* ---------- quem somos ----------*/
+
+/* logo fixa  no header das pages, exceto página inicial inicial */
+#bodyQuemSomos header img,
+#bodyServicos header img,
+#bodyFaleConosco header img {
+    width: 8%;
+    position: fixed;
+    top: .3rem;
+    left: 4.3rem;
+    z-index: 2500;
+}
+
+#bodyQuemSomos {
+    background-color: var(--mediumBlue);
+}
+
+.cardQuemSomos,
+.cardQuemSomos2 {
+    background-color: var(--lightGray);
+}
+
+.cardQuemSomos2 {
+    font-size: .9rem;
+}
+
+.cardQuemSomos a {
+    text-decoration: none;
+}
+
+/* fonte diferenciada para os nomes das profissionais */
+/* cores dos títulos h1, h2 etc definidas para todo site mais acima */
+
+.cardQuemSomos h2,
+.cardQuemSomos2 h4{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/* cores dos textos */
+.cardQuemSomos p,
+.cardQuemSomos2 p {
+    color: var(--mediumBlue);
+}
+
+.mari,
+.wynie {
+    z-index: 3500;
+}
+
+/* ---------- servicos ----------*/
+
+#bodyServicos {
+    background-color: var(--lightGray);
+}
+
+.cardServicos {
+    position: relative;
+}
+
+ul.listaServicos {
+    top: 7rem;
+    left: 4rem;
+    position: fixed;
+}
+
+.listaServicos a {
+
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+div.colunaItens div {
+    height: 31rem;
+}
+
+#scrollServicos > ul > li > a {
+    background-color: var(--lightGray);
+}
+
+.cardServicos h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: var(--offwhite);
+    padding: 1%;
+}
+
+#servicos img {
+    width: 50%;
+}
+
+#servicosImg {
+    background-image: url(../img/texturasElementos.png);
+    background-size: 28rem;
+    background-repeat: no-repeat;
+}
+
+#interioresImg {
+    background-image: url(../img/topaz4sala.png);
+    background-size: 35rem;
+    background-repeat: no-repeat;
+}
+
+/* dependendo do tamanho do texto o background que fica na div após o texto, precisa ser ajustada em background-size, para ocupar a tela de forma harmoniosa */
+
+#acessibilidadeImg {
+    background-image: url(../img/acessibilidade.jpg);
+    background-size: 26rem;
+    background-repeat: no-repeat;
+}
+
+#paisagismoImg {
+    background-image: url(../img/paisagismo.jpg);
+    background-size: 26rem;
+    background-repeat: no-repeat;
+}
+
+#fachadaImg {
+    background-image: url(../img/fachada2.jpg);
+    background-size: 28rem;
+    background-repeat: no-repeat;
+}
+
+#institucionalImg {
+    background-image: url(../img/institucional.png);
+    background-size: 21rem;
+    background-repeat: no-repeat;
+}
+
+#restauroImg {
+    background-image: url(../img/restauro.jpg);
+    background-size: 28rem;
+    background-repeat: no-repeat;
+}
+
+#consultoriaImg {
+    background-image: url(../img/livro.jpg);
+    background-size: 28rem;
+    background-repeat: no-repeat;
+}
+
+
+/* ---------- fale conosco ----------*/
+
+#bodyFaleConosco {
+    background-color: var(--mediumBlue);
+}
+
+form {
+    font-size: .9rem;
+    background-color: var(--lightGray);
+    color: var(--darkBlue);
+    border-radius: .2rem;
+}
+
+#sectionFaleConosco input[type=file], 
+#sectionFaleConosco input,
+#sectionFaleConosco label {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.estiloCheck label {    
+    cursor: pointer;
+}
+
+#mensagemForm {
+    height: 6rem;
+    overflow: auto;
+}
+
+#msgFormularioEnviado {
+display: none;
+}
+
+
+aside h5 {
+    text-shadow: var(--lightGray) .5px .5px .5px;
+}
+
+aside p {
+    color: var(--lightGray);
+    line-height: 1.6rem;
+}
+
+/* footer1 - pagina Inicial---------footerPages - todas as páginas */
+
+/* footer 1 é iniciado como display none na página inicial, informado acima, junto com os demais delementos de transição */
+
+.footerPages,
+.footer1 {
+    background-color: var(--offwhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: .7rem;
+    text-align: right;
+    background-image: url(../img/logoAzul.png);
+    background-size: contain;
+    background-position-x: .9rem;
+    background-repeat: no-repeat;
+    padding: .3rem 1.1rem .3rem 0;
+    width: 100%;
+}
+
+.footer1 {
+    /* se preferir deixar alinhado com a logo superior, deixar rem 3 */
+    background-position-x: 1rem;
+    display: none;
+}
+
+.footerPages div a,
+.footer1 div a{
+    color: var(--blue);
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+ .footerServicos {
+     position: fixed;
+     bottom: 0;
+ }
