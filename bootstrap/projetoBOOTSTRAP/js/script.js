@@ -86,12 +86,12 @@ $(document).ready(function () {
 })
 
 // função com retorno suave ao topo
-$('#btnTopo').click(function() {
+$('#btnTopo').click(function () {
    $("html, body").animate({
-   scrollTop: 0
+      scrollTop: 0
    }, 1500);
    return false;
-   });
+});
 
 
 // ------------------fim função botão início com scroll-----------
@@ -268,10 +268,17 @@ if (document.getElementById("nome") != null) {
    }
 }
 
-
 // -------------- função para escrever uma mensagem após envio do formulário
 
 document.getElementById("btnEnviar").onclick = function () {
+   if (document.getElementById("nome").value == "") {
+      document.getElementById("nome").focus();
+      return
+   }
+   if (document.getElementById("email").value == "") {
+      document.getElementById("email").focus();
+      return
+   }
    $("#msgFormularioEnviado").show();
    document.getElementById("msgFormularioEnviado").innerText = `${nome}, seus dados foram enviados com sucesso! Aguarde nosso contato!`;
    $(document).scrollTop(0);

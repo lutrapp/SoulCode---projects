@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-
 /* ---------- pagina inicial ----------*/
 
 /* navbar início */
@@ -195,6 +194,7 @@ header a:hover {
     margin-top: 1rem;
 }
 
+
 @media (max-width: 600px){
     #carousel1 img
    {
@@ -246,11 +246,11 @@ header a:hover {
 #bodyQuemSomos header img,
 #bodyServicos header img,
 #bodyFaleConosco header img {
-    width: 8%;
+    width: 5rem;
     position: fixed;
     top: .3rem;
-    left: 4.3rem;
-    z-index: 2500;
+    left: 1.1rem;
+    /* z-index: 500; */
 }
 
 #bodyQuemSomos {
