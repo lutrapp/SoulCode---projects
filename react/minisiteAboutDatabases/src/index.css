@@ -1,0 +1,310 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: arial;
+  font-size: 1.4rem;
+  --lightGray: lightgray;
+  --darkLetters: #131212;
+  --yellowDetails: rgb(221, 221, 54);
+  --lessTransparency: rgba(255, 255, 255, 0.5);
+  --moreTransparency: rgba(255, 255, 255, 0.8);
+  --blue: blue;
+}
+
+.content {
+  background-color: wheat;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkLetters);
+}
+
+/* header */
+
+header nav ul li {
+  padding: 1.2rem;
+}
+
+header nav ul li:hover {
+  transition: .6s;
+  font-variant: small-caps;
+}
+
+header {
+  background-color: var(--lightGray);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li img {
+  height: 12vh;
+}
+
+
+/* home */
+.home {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#home i:hover {
+  color: var(--blue);
+}
+
+.home div img {
+  width: 100%;
+}
+
+/* formatação comum a estas páginas */
+.home,
+.mongoPage,
+.sqlPage {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: minmax(8vh, max-content);
+}
+
+/* navegação em home */
+nav.navHome {
+  width: 100%;
+  background-color: var(--darkLetters);
+  padding: .7rem 0 .7rem 0;
+}
+
+nav.navHome ul li a {
+  color: white;
+  align-items: center;
+  padding: .3rem .1 .3rem 0.1;
+}
+
+nav.navHome ul li a:hover {
+  color: var(--blue);
+}
+
+.home p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+#impacto img {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#estrutura,
+#saberEscolher,
+#impacto,
+#newsletter{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lessTransparency);
+  margin-bottom: 2rem;
+}
+
+#newsletter{
+  margin-bottom: 22vh;
+}
+
+
+.btnNewsletter {
+  border: ridge;
+  padding: 1rem;
+  margin: 0 auto;
+
+}
+
+.btnNewsletter:hover {
+  background-color: var(--lightGray);
+}
+
+hr {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.ancoraTopo {
+  font-variant: small-caps;
+  padding: 1rem;
+  text-align: center;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.ancoraTopo  a:hover {
+  transition: .7s;
+  color: var(--blue);
+}
+
+/* mongo page */
+.mongoPage,
+.sqlPage{
+  background-color: var(--moreTransparency);
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mongoPage p,
+.sqlPage p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.mongoPage p:last-child,
+.sqlPage p:last-child{
+  margin-bottom: 5rem;
+} 
+
+/* comparative page */
+.comparative {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  background-color: var(--moreTransparency);
+  margin-bottom: 15vh;
+}
+
+.comparative h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.comparative div img {
+  width: 90%;
+}
+.comparative div:last-child {
+  margin-bottom: 30vh;
+}
+
+/* newsletter */
+.newsLetter h2 {
+  text-align: center;
+  padding-top: 1.6rem;
+}
+
+form {
+  background-color: var(--lessTransparency);
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 3rem;
+}
+
+form,
+form input,
+form button {
+ text-align: center;
+ font-size: 1rem;
+ font-family: Arial, Helvetica, sans-serif;
+ border-radius: 5px;
+ border: none;
+}
+
+form input{
+  width: 50%;
+}
+
+form input,
+form button {
+  height: 1.8rem;
+  margin-top: 1rem;
+}
+
+form button {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: groove;
+}
+
+form button:hover {
+  background-color: var(--lightGray);
+  transition: .6s;
+}
+
+/* footer */
+footer {
+  background-color: var(--lightGray);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: .3rem;
+  font-size: .7rem;
+}
+
+footer ul li{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer li:last-child{
+  font-variant: small-caps;
+}
+
+footer > nav > ul > li:nth-child(2) > a >i{
+  transition: all .7s;
+  cursor: pointer;
+}
+
+footer > nav > ul > li:nth-child(2) > a:hover i{
+  transform: rotateZ(360deg);
+  color: var(--blue);
+}
+
+
+
+/* media queries para dispositivos com tela menor*/
+
+@media only screen and (max-width: 600px) {
+  nav.navHome ul li a{
+    font-size: .7rem;
+  }
+
+  header nav ul li {
+    padding: .5rem .1rem .5rem .1rem;
+    font-size: .9rem;
+  }
+  
+  header nav ul li:first-child{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav.navHome ul li a{
+    font-size: .7rem;
+  }
+
+  header nav ul li {
+    padding: .5rem .1rem .5rem .1rem;
+    font-size: .9rem;
+  }
+}
+
